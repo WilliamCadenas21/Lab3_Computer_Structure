@@ -7,7 +7,7 @@ PROCEDURE SQ(
 SIGNAL Xcur, Ycur,Xpos, Ypos: in integer; 
 signal RGB: OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
 SIGNAL DRAW: OUT STD_LOGIC);
-END MY
+END MY;
 
 PACKAGE BODY MY IS 
 PROCEDURE SQ(
@@ -21,7 +21,7 @@ BEGIN
 		RGB <= "11111111";
 		DRAW <='1';
 		else
-		DRAW <='1';
+		DRAW <='0';
 	END IF;
 	
 END SQ;
