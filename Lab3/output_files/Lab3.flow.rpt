@@ -1,5 +1,5 @@
 Flow report for Lab3
-Tue Sep 25 10:29:45 2018
+Mon Oct 01 11:04:10 2018
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -40,18 +40,18 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Tue Sep 25 10:29:40 2018       ;
+; Flow Status                        ; Successful - Mon Oct 01 11:04:03 2018       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; Lab3                                        ;
 ; Top-level Entity Name              ; lab3                                        ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 69 / 114,480 ( < 1 % )                      ;
-;     Total combinational functions  ; 46 / 114,480 ( < 1 % )                      ;
-;     Dedicated logic registers      ; 48 / 114,480 ( < 1 % )                      ;
-; Total registers                    ; 48                                          ;
-; Total pins                         ; 28 / 529 ( 5 % )                            ;
+; Total logic elements               ; 143 / 114,480 ( < 1 % )                     ;
+;     Total combinational functions  ; 118 / 114,480 ( < 1 % )                     ;
+;     Dedicated logic registers      ; 102 / 114,480 ( < 1 % )                     ;
+; Total registers                    ; 102                                         ;
+; Total pins                         ; 44 / 529 ( 8 % )                            ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0 / 3,981,312 ( 0 % )                       ;
 ; Embedded Multiplier 9-bit elements ; 0 / 532 ( 0 % )                             ;
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 09/25/2018 10:28:56 ;
+; Start date & time ; 10/01/2018 11:03:13 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Lab3                ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+-------------------------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                                 ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+-------------------------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 180649680037036.153788933508220                       ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 180649680037036.153840979209392                       ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                                    ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                                     ; --            ; --          ; --         ;
 ; MISC_FILE                           ; PLL/synthesis/../PLL.cmp                              ; --            ; --          ; --         ;
@@ -99,11 +99,11 @@ refer to the applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:25     ; 1.0                     ; 4821 MB             ; 00:00:47                           ;
-; Fitter                    ; 00:00:11     ; 1.0                     ; 5728 MB             ; 00:00:18                           ;
-; Assembler                 ; 00:00:04     ; 1.0                     ; 4703 MB             ; 00:00:03                           ;
-; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 4863 MB             ; 00:00:03                           ;
-; Total                     ; 00:00:43     ; --                      ; --                  ; 00:01:11                           ;
+; Analysis & Synthesis      ; 00:00:26     ; 1.0                     ; 4816 MB             ; 00:00:53                           ;
+; Fitter                    ; 00:00:16     ; 1.0                     ; 5737 MB             ; 00:00:26                           ;
+; Assembler                 ; 00:00:03     ; 1.0                     ; 4700 MB             ; 00:00:04                           ;
+; TimeQuest Timing Analyzer ; 00:00:03     ; 1.2                     ; 4868 MB             ; 00:00:03                           ;
+; Total                     ; 00:00:48     ; --                      ; --                  ; 00:01:26                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

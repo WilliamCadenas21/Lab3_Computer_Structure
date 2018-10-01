@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Lab3
-Tue Sep 25 10:29:20 2018
+Mon Oct 01 11:03:38 2018
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -14,16 +14,21 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis IP Cores Summary
-  9. Registers Removed During Synthesis
- 10. General Register Statistics
- 11. Source assignments for PLL:C2|PLL_altpll_0:altpll_0
- 12. Source assignments for PLL:C2|PLL_altpll_0:altpll_0|PLL_altpll_0_stdsync_sv6:stdsync2|PLL_altpll_0_dffpipe_l2c:dffpipe3
- 13. Port Connectivity Checks: "PLL:C2|PLL_altpll_0:altpll_0|PLL_altpll_0_altpll_3742:sd1"
- 14. Port Connectivity Checks: "PLL:C2|PLL_altpll_0:altpll_0"
- 15. Port Connectivity Checks: "PLL:C2"
- 16. Post-Synthesis Netlist Statistics for Top Partition
- 17. Elapsed Time Per Partition
- 18. Analysis & Synthesis Messages
+  9. State Machine - |lab3|lab2:C3|estado
+ 10. Registers Removed During Synthesis
+ 11. Removed Registers Triggering Further Register Optimizations
+ 12. General Register Statistics
+ 13. Inverted Register Statistics
+ 14. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 15. Source assignments for PLL:C2|PLL_altpll_0:altpll_0
+ 16. Source assignments for PLL:C2|PLL_altpll_0:altpll_0|PLL_altpll_0_stdsync_sv6:stdsync2|PLL_altpll_0_dffpipe_l2c:dffpipe3
+ 17. Port Connectivity Checks: "Lab2:C3"
+ 18. Port Connectivity Checks: "PLL:C2|PLL_altpll_0:altpll_0|PLL_altpll_0_altpll_3742:sd1"
+ 19. Port Connectivity Checks: "PLL:C2|PLL_altpll_0:altpll_0"
+ 20. Port Connectivity Checks: "PLL:C2"
+ 21. Post-Synthesis Netlist Statistics for Top Partition
+ 22. Elapsed Time Per Partition
+ 23. Analysis & Synthesis Messages
 
 
 
@@ -49,16 +54,16 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Sep 25 10:29:20 2018       ;
+; Analysis & Synthesis Status        ; Successful - Mon Oct 01 11:03:38 2018       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; Lab3                                        ;
 ; Top-level Entity Name              ; lab3                                        ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 69                                          ;
-;     Total combinational functions  ; 46                                          ;
-;     Dedicated logic registers      ; 48                                          ;
-; Total registers                    ; 48                                          ;
-; Total pins                         ; 28                                          ;
+; Total logic elements               ; 141                                         ;
+;     Total combinational functions  ; 118                                         ;
+;     Dedicated logic registers      ; 102                                         ;
+; Total registers                    ; 102                                         ;
+; Total pins                         ; 44                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -179,42 +184,43 @@ refer to the applicable agreement for further details.
 ; PLL/synthesis/PLL.vhd                   ; yes             ; User VHDL File         ; C:/Users/Estudiante/Desktop/Lab3_Computer_Structure/Lab3/PLL/synthesis/PLL.vhd                   ; PLL     ;
 ; PLL/synthesis/submodules/PLL_altpll_0.v ; yes             ; User Verilog HDL File  ; C:/Users/Estudiante/Desktop/Lab3_Computer_Structure/Lab3/PLL/synthesis/submodules/PLL_altpll_0.v ; PLL     ;
 ; MY.vhd                                  ; yes             ; User VHDL File         ; C:/Users/Estudiante/Desktop/Lab3_Computer_Structure/Lab3/MY.vhd                                  ;         ;
+; lab2.vhd                                ; yes             ; Auto-Found VHDL File   ; C:/Users/Estudiante/Desktop/Lab3_Computer_Structure/Lab3/lab2.vhd                                ;         ;
 +-----------------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------------------------+---------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                                                              ;
-+---------------------------------------------+----------------------------------------------------------------------------+
-; Resource                                    ; Usage                                                                      ;
-+---------------------------------------------+----------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 69                                                                         ;
-;                                             ;                                                                            ;
-; Total combinational functions               ; 46                                                                         ;
-; Logic element usage by number of LUT inputs ;                                                                            ;
-;     -- 4 input functions                    ; 19                                                                         ;
-;     -- 3 input functions                    ; 4                                                                          ;
-;     -- <=2 input functions                  ; 23                                                                         ;
-;                                             ;                                                                            ;
-; Logic elements by mode                      ;                                                                            ;
-;     -- normal mode                          ; 26                                                                         ;
-;     -- arithmetic mode                      ; 20                                                                         ;
-;                                             ;                                                                            ;
-; Total registers                             ; 48                                                                         ;
-;     -- Dedicated logic registers            ; 48                                                                         ;
-;     -- I/O registers                        ; 0                                                                          ;
-;                                             ;                                                                            ;
-; I/O pins                                    ; 28                                                                         ;
-;                                             ;                                                                            ;
-; Embedded Multiplier 9-bit elements          ; 0                                                                          ;
-;                                             ;                                                                            ;
-; Total PLLs                                  ; 1                                                                          ;
-;     -- PLLs                                 ; 1                                                                          ;
-;                                             ;                                                                            ;
-; Maximum fan-out node                        ; PLL:C2|PLL_altpll_0:altpll_0|PLL_altpll_0_altpll_3742:sd1|wire_pll7_clk[0] ;
-; Maximum fan-out                             ; 50                                                                         ;
-; Total fan-out                               ; 318                                                                        ;
-; Average fan-out                             ; 2.11                                                                       ;
-+---------------------------------------------+----------------------------------------------------------------------------+
++-------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                 ;
++---------------------------------------------+---------------+
+; Resource                                    ; Usage         ;
++---------------------------------------------+---------------+
+; Estimated Total logic elements              ; 141           ;
+;                                             ;               ;
+; Total combinational functions               ; 118           ;
+; Logic element usage by number of LUT inputs ;               ;
+;     -- 4 input functions                    ; 51            ;
+;     -- 3 input functions                    ; 12            ;
+;     -- <=2 input functions                  ; 55            ;
+;                                             ;               ;
+; Logic elements by mode                      ;               ;
+;     -- normal mode                          ; 67            ;
+;     -- arithmetic mode                      ; 51            ;
+;                                             ;               ;
+; Total registers                             ; 102           ;
+;     -- Dedicated logic registers            ; 102           ;
+;     -- I/O registers                        ; 0             ;
+;                                             ;               ;
+; I/O pins                                    ; 44            ;
+;                                             ;               ;
+; Embedded Multiplier 9-bit elements          ; 0             ;
+;                                             ;               ;
+; Total PLLs                                  ; 1             ;
+;     -- PLLs                                 ; 1             ;
+;                                             ;               ;
+; Maximum fan-out node                        ; ps2_clk~input ;
+; Maximum fan-out                             ; 54            ;
+; Total fan-out                               ; 717           ;
+; Average fan-out                             ; 2.32          ;
++---------------------------------------------+---------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -222,11 +228,12 @@ refer to the applicable agreement for further details.
 +-----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------+--------------------------+--------------+
 ; Compilation Hierarchy Node              ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                             ; Entity Name              ; Library Name ;
 +-----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------+--------------------------+--------------+
-; |lab3                                   ; 46 (0)              ; 48 (0)                    ; 0           ; 0            ; 0       ; 0         ; 28   ; 0            ; |lab3                                                           ; lab3                     ; work         ;
+; |lab3                                   ; 118 (0)             ; 102 (0)                   ; 0           ; 0            ; 0       ; 0         ; 44   ; 0            ; |lab3                                                           ; lab3                     ; work         ;
 ;    |PLL:C2|                             ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab3|PLL:C2                                                    ; PLL                      ; pll          ;
 ;       |PLL_altpll_0:altpll_0|           ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab3|PLL:C2|PLL_altpll_0:altpll_0                              ; PLL_altpll_0             ; PLL          ;
 ;          |PLL_altpll_0_altpll_3742:sd1| ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab3|PLL:C2|PLL_altpll_0:altpll_0|PLL_altpll_0_altpll_3742:sd1 ; PLL_altpll_0_altpll_3742 ; PLL          ;
 ;    |SYNC:C1|                            ; 46 (46)             ; 48 (48)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab3|SYNC:C1                                                   ; SYNC                     ; work         ;
+;    |lab2:C3|                            ; 72 (72)             ; 54 (54)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab3|lab2:C3                                                   ; lab2                     ; work         ;
 +-----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------+--------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -241,14 +248,71 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+------------------------------------+-----------------+
 
 
+Encoding Type:  One-Hot
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |lab3|lab2:C3|estado                                                                                                                                                                       ;
++------------------------+-------------------+------------------+------------+--------------+---------------------+-----------------------+------------------------+-----------------------+-----------------+
+; Name                   ; estado.startagain ; estado.breakLine ; estado.fin ; estado.listo ; estado.configcursor ; estado.limpiardisplay ; estado.encenderdisplay ; estado.configpantalla ; estado.encender ;
++------------------------+-------------------+------------------+------------+--------------+---------------------+-----------------------+------------------------+-----------------------+-----------------+
+; estado.encender        ; 0                 ; 0                ; 0          ; 0            ; 0                   ; 0                     ; 0                      ; 0                     ; 0               ;
+; estado.configpantalla  ; 0                 ; 0                ; 0          ; 0            ; 0                   ; 0                     ; 0                      ; 1                     ; 1               ;
+; estado.encenderdisplay ; 0                 ; 0                ; 0          ; 0            ; 0                   ; 0                     ; 1                      ; 0                     ; 1               ;
+; estado.limpiardisplay  ; 0                 ; 0                ; 0          ; 0            ; 0                   ; 1                     ; 0                      ; 0                     ; 1               ;
+; estado.configcursor    ; 0                 ; 0                ; 0          ; 0            ; 1                   ; 0                     ; 0                      ; 0                     ; 1               ;
+; estado.listo           ; 0                 ; 0                ; 0          ; 1            ; 0                   ; 0                     ; 0                      ; 0                     ; 1               ;
+; estado.fin             ; 0                 ; 0                ; 1          ; 0            ; 0                   ; 0                     ; 0                      ; 0                     ; 1               ;
+; estado.breakLine       ; 0                 ; 1                ; 0          ; 0            ; 0                   ; 0                     ; 0                      ; 0                     ; 1               ;
+; estado.startagain      ; 1                 ; 0                ; 0          ; 0            ; 0                   ; 0                     ; 0                      ; 0                     ; 1               ;
++------------------------+-------------------+------------------+------------+--------------+---------------------+-----------------------+------------------------+-----------------------+-----------------+
+
+
 +----------------------------------------------------------------------------------+
 ; Registers Removed During Synthesis                                               ;
 +-----------------------------------------+----------------------------------------+
 ; Register name                           ; Reason for Removal                     ;
 +-----------------------------------------+----------------------------------------+
 ; PLL:C2|PLL_altpll_0:altpll_0|prev_reset ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 1   ;                                        ;
+; lab2:C3|\comb_logic:contar[0..31]       ; Lost fanout                            ;
+; lab2:C3|\comb_logic:contar2[0..31]      ; Lost fanout                            ;
+; lab2:C3|\comb_logic:contar3[0..31]      ; Lost fanout                            ;
+; lab2:C3|info[0..7]                      ; Lost fanout                            ;
+; lab2:C3|estado.encender                 ; Lost fanout                            ;
+; lab2:C3|estado.configpantalla           ; Lost fanout                            ;
+; lab2:C3|estado.encenderdisplay          ; Lost fanout                            ;
+; lab2:C3|estado.limpiardisplay           ; Lost fanout                            ;
+; lab2:C3|estado.configcursor             ; Lost fanout                            ;
+; lab2:C3|estado.listo                    ; Lost fanout                            ;
+; lab2:C3|estado.fin                      ; Lost fanout                            ;
+; lab2:C3|estado.breakLine                ; Lost fanout                            ;
+; lab2:C3|estado.startagain               ; Lost fanout                            ;
+; Total Number of Removed Registers = 114 ;                                        ;
 +-----------------------------------------+----------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                             ;
++--------------------------------+--------------------+-----------------------------------------------------------------------------------+
+; Register name                  ; Reason for Removal ; Registers Removed due to This Register                                            ;
++--------------------------------+--------------------+-----------------------------------------------------------------------------------+
+; lab2:C3|\comb_logic:contar3[0] ; Lost Fanouts       ; lab2:C3|\comb_logic:contar3[1], lab2:C3|\comb_logic:contar3[2],                   ;
+;                                ;                    ; lab2:C3|\comb_logic:contar3[3], lab2:C3|\comb_logic:contar3[4],                   ;
+;                                ;                    ; lab2:C3|\comb_logic:contar3[5], lab2:C3|\comb_logic:contar3[6],                   ;
+;                                ;                    ; lab2:C3|\comb_logic:contar3[7], lab2:C3|\comb_logic:contar3[8],                   ;
+;                                ;                    ; lab2:C3|\comb_logic:contar3[9], lab2:C3|\comb_logic:contar3[10],                  ;
+;                                ;                    ; lab2:C3|\comb_logic:contar3[11], lab2:C3|\comb_logic:contar3[12],                 ;
+;                                ;                    ; lab2:C3|\comb_logic:contar3[13], lab2:C3|\comb_logic:contar3[14],                 ;
+;                                ;                    ; lab2:C3|\comb_logic:contar3[15], lab2:C3|\comb_logic:contar3[16],                 ;
+;                                ;                    ; lab2:C3|\comb_logic:contar3[17], lab2:C3|\comb_logic:contar3[18],                 ;
+;                                ;                    ; lab2:C3|\comb_logic:contar3[19], lab2:C3|\comb_logic:contar3[20],                 ;
+;                                ;                    ; lab2:C3|\comb_logic:contar3[21], lab2:C3|\comb_logic:contar3[22],                 ;
+;                                ;                    ; lab2:C3|\comb_logic:contar3[23], lab2:C3|\comb_logic:contar3[24],                 ;
+;                                ;                    ; lab2:C3|\comb_logic:contar3[25], lab2:C3|\comb_logic:contar3[26],                 ;
+;                                ;                    ; lab2:C3|\comb_logic:contar3[27], lab2:C3|\comb_logic:contar3[28],                 ;
+;                                ;                    ; lab2:C3|\comb_logic:contar3[29], lab2:C3|\comb_logic:contar3[30],                 ;
+;                                ;                    ; lab2:C3|\comb_logic:contar3[31]                                                   ;
+; lab2:C3|\comb_logic:contar[31] ; Lost Fanouts       ; lab2:C3|estado.limpiardisplay, lab2:C3|estado.configcursor, lab2:C3|estado.listo, ;
+;                                ;                    ; lab2:C3|estado.fin, lab2:C3|estado.breakLine, lab2:C3|estado.startagain           ;
++--------------------------------+--------------------+-----------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -256,14 +320,48 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 48    ;
-; Number of registers using Synchronous Clear  ; 22    ;
+; Total registers                              ; 102   ;
+; Number of registers using Synchronous Clear  ; 54    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 11    ;
+; Number of registers using Clock Enable       ; 25    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++---------------------------------------------------+
+; Inverted Register Statistics                      ;
++-----------------------------------------+---------+
+; Inverted Register                       ; Fan out ;
++-----------------------------------------+---------+
+; lab2:C3|display_right[6]                ; 1       ;
+; lab2:C3|display_right[5]                ; 1       ;
+; lab2:C3|display_right[4]                ; 1       ;
+; lab2:C3|display_right[3]                ; 1       ;
+; lab2:C3|display_right[2]                ; 1       ;
+; lab2:C3|display_right[1]                ; 1       ;
+; lab2:C3|display_right[0]                ; 1       ;
+; lab2:C3|display_left[6]                 ; 1       ;
+; lab2:C3|display_left[5]                 ; 1       ;
+; lab2:C3|display_left[4]                 ; 1       ;
+; lab2:C3|display_left[3]                 ; 1       ;
+; lab2:C3|display_left[2]                 ; 1       ;
+; lab2:C3|display_left[1]                 ; 1       ;
+; lab2:C3|display_left[0]                 ; 1       ;
+; Total number of inverted registers = 14 ;         ;
++-----------------------------------------+---------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
+; 5:1                ; 32 bits   ; 96 LEs        ; 32 LEs               ; 64 LEs                 ; Yes        ; |lab3|lab2:C3|\comb_logic:contar3[12] ;
+; 7:1                ; 32 bits   ; 128 LEs       ; 32 LEs               ; 96 LEs                 ; Yes        ; |lab3|lab2:C3|\comb_logic:contar2[22] ;
+; 8:1                ; 32 bits   ; 160 LEs       ; 32 LEs               ; 128 LEs                ; Yes        ; |lab3|lab2:C3|\comb_logic:contar[2]   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -282,6 +380,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------+-------+------+------------------------------------------------------------------------+
 ; AUTO_SHIFT_REGISTER_RECOGNITION ; OFF   ; -    ; -                                                                      ;
 +---------------------------------+-------+------+------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Lab2:C3"                                                                                                                                            ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                                                                                      ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; led_vector  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; reset       ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; velocity    ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; provicional ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; lcd         ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
+; enviar      ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
+; rs          ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
+; rw          ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------+
@@ -329,23 +443,24 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 28                          ;
-; cycloneiii_ff         ; 48                          ;
+; boundary_port         ; 44                          ;
+; cycloneiii_ff         ; 102                         ;
+;     ENA               ; 14                          ;
 ;     ENA SCLR          ; 11                          ;
-;     SCLR              ; 11                          ;
-;     plain             ; 26                          ;
-; cycloneiii_lcell_comb ; 46                          ;
-;     arith             ; 20                          ;
-;         2 data inputs ; 20                          ;
-;     normal            ; 26                          ;
-;         1 data inputs ; 2                           ;
+;     SCLR              ; 43                          ;
+;     plain             ; 34                          ;
+; cycloneiii_lcell_comb ; 132                         ;
+;     arith             ; 51                          ;
+;         2 data inputs ; 51                          ;
+;     normal            ; 81                          ;
+;         1 data inputs ; 17                          ;
 ;         2 data inputs ; 1                           ;
-;         3 data inputs ; 4                           ;
-;         4 data inputs ; 19                          ;
+;         3 data inputs ; 12                          ;
+;         4 data inputs ; 51                          ;
 ; cycloneiii_pll        ; 1                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 4.00                        ;
-; Average LUT depth     ; 1.83                        ;
+; Max LUT depth         ; 5.00                        ;
+; Average LUT depth     ; 2.25                        ;
 +-----------------------+-----------------------------+
 
 
@@ -364,7 +479,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Tue Sep 25 10:28:55 2018
+    Info: Processing started: Mon Oct 01 11:03:12 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab3 -c Lab3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -372,7 +487,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file vhdl2.v
     Info (12022): Found design unit 1: SYNC-MAIN File: C:/Users/Estudiante/Desktop/Lab3_Computer_Structure/Lab3/vhdl2.vhd Line: 18
     Info (12023): Found entity 1: SYNC File: C:/Users/Estudiante/Desktop/Lab3_Computer_Structure/Lab3/vhdl2.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file lab3.vhd
-    Info (12022): Found design unit 1: lab3-MAIN File: C:/Users/Estudiante/Desktop/Lab3_Computer_Structure/Lab3/lab3.vhd Line: 16
+    Info (12022): Found design unit 1: lab3-MAIN File: C:/Users/Estudiante/Desktop/Lab3_Computer_Structure/Lab3/lab3.vhd Line: 20
     Info (12023): Found entity 1: lab3 File: C:/Users/Estudiante/Desktop/Lab3_Computer_Structure/Lab3/lab3.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file pll/synthesis/pll.vhd
     Info (12022): Found design unit 1: PLL-rtl File: C:/Users/Estudiante/Desktop/Lab3_Computer_Structure/Lab3/PLL/synthesis/PLL.vhd Line: 17
@@ -386,13 +501,13 @@ Info (12021): Found 2 design units, including 0 entities, in source file my.vhd
     Info (12022): Found design unit 1: MY File: C:/Users/Estudiante/Desktop/Lab3_Computer_Structure/Lab3/MY.vhd Line: 5
     Info (12022): Found design unit 2: MY-body File: C:/Users/Estudiante/Desktop/Lab3_Computer_Structure/Lab3/MY.vhd Line: 12
 Info (12127): Elaborating entity "Lab3" for the top level hierarchy
-Warning (10540): VHDL Signal Declaration warning at lab3.vhd(17): used explicit default value for signal "RESET" because signal was never assigned a value File: C:/Users/Estudiante/Desktop/Lab3_Computer_Structure/Lab3/lab3.vhd Line: 17
-Info (12128): Elaborating entity "PLL" for hierarchy "PLL:C2" File: C:/Users/Estudiante/Desktop/Lab3_Computer_Structure/Lab3/lab3.vhd Line: 41
+Warning (10540): VHDL Signal Declaration warning at lab3.vhd(21): used explicit default value for signal "RESET" because signal was never assigned a value File: C:/Users/Estudiante/Desktop/Lab3_Computer_Structure/Lab3/lab3.vhd Line: 21
+Info (12128): Elaborating entity "PLL" for hierarchy "PLL:C2" File: C:/Users/Estudiante/Desktop/Lab3_Computer_Structure/Lab3/lab3.vhd Line: 60
 Info (12128): Elaborating entity "PLL_altpll_0" for hierarchy "PLL:C2|PLL_altpll_0:altpll_0" File: C:/Users/Estudiante/Desktop/Lab3_Computer_Structure/Lab3/PLL/synthesis/PLL.vhd Line: 45
 Info (12128): Elaborating entity "PLL_altpll_0_stdsync_sv6" for hierarchy "PLL:C2|PLL_altpll_0:altpll_0|PLL_altpll_0_stdsync_sv6:stdsync2" File: C:/Users/Estudiante/Desktop/Lab3_Computer_Structure/Lab3/PLL/synthesis/submodules/PLL_altpll_0.v Line: 276
 Info (12128): Elaborating entity "PLL_altpll_0_dffpipe_l2c" for hierarchy "PLL:C2|PLL_altpll_0:altpll_0|PLL_altpll_0_stdsync_sv6:stdsync2|PLL_altpll_0_dffpipe_l2c:dffpipe3" File: C:/Users/Estudiante/Desktop/Lab3_Computer_Structure/Lab3/PLL/synthesis/submodules/PLL_altpll_0.v Line: 116
 Info (12128): Elaborating entity "PLL_altpll_0_altpll_3742" for hierarchy "PLL:C2|PLL_altpll_0:altpll_0|PLL_altpll_0_altpll_3742:sd1" File: C:/Users/Estudiante/Desktop/Lab3_Computer_Structure/Lab3/PLL/synthesis/submodules/PLL_altpll_0.v Line: 282
-Info (12128): Elaborating entity "SYNC" for hierarchy "SYNC:C1" File: C:/Users/Estudiante/Desktop/Lab3_Computer_Structure/Lab3/lab3.vhd Line: 43
+Info (12128): Elaborating entity "SYNC" for hierarchy "SYNC:C1" File: C:/Users/Estudiante/Desktop/Lab3_Computer_Structure/Lab3/lab3.vhd Line: 62
 Info (10041): Inferred latch for "RGB[0]" at vhdl2.vhd(36) File: C:/Users/Estudiante/Desktop/Lab3_Computer_Structure/Lab3/vhdl2.vhd Line: 36
 Info (10041): Inferred latch for "RGB[1]" at vhdl2.vhd(36) File: C:/Users/Estudiante/Desktop/Lab3_Computer_Structure/Lab3/vhdl2.vhd Line: 36
 Info (10041): Inferred latch for "RGB[2]" at vhdl2.vhd(36) File: C:/Users/Estudiante/Desktop/Lab3_Computer_Structure/Lab3/vhdl2.vhd Line: 36
@@ -401,18 +516,25 @@ Info (10041): Inferred latch for "RGB[4]" at vhdl2.vhd(36) File: C:/Users/Estudi
 Info (10041): Inferred latch for "RGB[5]" at vhdl2.vhd(36) File: C:/Users/Estudiante/Desktop/Lab3_Computer_Structure/Lab3/vhdl2.vhd Line: 36
 Info (10041): Inferred latch for "RGB[6]" at vhdl2.vhd(36) File: C:/Users/Estudiante/Desktop/Lab3_Computer_Structure/Lab3/vhdl2.vhd Line: 36
 Info (10041): Inferred latch for "RGB[7]" at vhdl2.vhd(36) File: C:/Users/Estudiante/Desktop/Lab3_Computer_Structure/Lab3/vhdl2.vhd Line: 36
+Warning (12125): Using design file lab2.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: lab2-FSM File: C:/Users/Estudiante/Desktop/Lab3_Computer_Structure/Lab3/lab2.vhd Line: 33
+    Info (12023): Found entity 1: lab2 File: C:/Users/Estudiante/Desktop/Lab3_Computer_Structure/Lab3/lab2.vhd Line: 8
+Info (12128): Elaborating entity "Lab2" for hierarchy "Lab2:C3" File: C:/Users/Estudiante/Desktop/Lab3_Computer_Structure/Lab3/lab3.vhd Line: 63
+Warning (10036): Verilog HDL or VHDL warning at lab2.vhd(36): object "stop" assigned a value but never read File: C:/Users/Estudiante/Desktop/Lab3_Computer_Structure/Lab3/lab2.vhd Line: 36
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (286030): Timing-Driven Synthesis is running
+Info (17049): 113 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 99 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 1 input pins
-    Info (21059): Implemented 27 output pins
-    Info (21061): Implemented 70 logic cells
+Info (21057): Implemented 187 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 3 input pins
+    Info (21059): Implemented 41 output pins
+    Info (21061): Implemented 142 logic cells
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4821 megabytes
-    Info: Processing ended: Tue Sep 25 10:29:20 2018
-    Info: Elapsed time: 00:00:25
-    Info: Total CPU time (on all processors): 00:00:48
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4816 megabytes
+    Info: Processing ended: Mon Oct 01 11:03:38 2018
+    Info: Elapsed time: 00:00:26
+    Info: Total CPU time (on all processors): 00:00:53
 
 

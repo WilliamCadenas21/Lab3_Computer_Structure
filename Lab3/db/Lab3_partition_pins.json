@@ -12,6 +12,62 @@
 					"strict" : false
 				},
 				{
+					"name" : "display_right[6]",
+					"strict" : false
+				},
+				{
+					"name" : "display_right[5]",
+					"strict" : false
+				},
+				{
+					"name" : "display_right[4]",
+					"strict" : false
+				},
+				{
+					"name" : "display_right[3]",
+					"strict" : false
+				},
+				{
+					"name" : "display_right[2]",
+					"strict" : false
+				},
+				{
+					"name" : "display_right[1]",
+					"strict" : false
+				},
+				{
+					"name" : "display_right[0]",
+					"strict" : false
+				},
+				{
+					"name" : "display_left[6]",
+					"strict" : false
+				},
+				{
+					"name" : "display_left[5]",
+					"strict" : false
+				},
+				{
+					"name" : "display_left[4]",
+					"strict" : false
+				},
+				{
+					"name" : "display_left[3]",
+					"strict" : false
+				},
+				{
+					"name" : "display_left[2]",
+					"strict" : false
+				},
+				{
+					"name" : "display_left[1]",
+					"strict" : false
+				},
+				{
+					"name" : "display_left[0]",
+					"strict" : false
+				},
+				{
 					"name" : "VGA_R[0]",
 					"strict" : false
 				},
@@ -105,6 +161,14 @@
 				},
 				{
 					"name" : "VGA_G[7]",
+					"strict" : false
+				},
+				{
+					"name" : "ps2_clk",
+					"strict" : false
+				},
+				{
+					"name" : "ps2_data",
 					"strict" : false
 				}
 			]
