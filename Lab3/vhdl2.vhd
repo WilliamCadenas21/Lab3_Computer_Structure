@@ -53,8 +53,12 @@ SIGNAL VPOS: INTEGER RANGE 0 TO 1066 :=0;
 
 			--101 HORIZONTAL
 			--42 VERITCAL
-SIGNAL SIZEFONTH: INTEGER:= 101+240; --1688/8
-SIGNAL SIZEFONTV: INTEGER:= 42+42; --1066/12
+SIGNAL SIZEFONTH: INTEGER:= 20; --1688/8
+SIGNAL SIZEFONTV: INTEGER:= 20; --1066/12
+SIGNAL SIZECOUNTH: INTEGER:= 0;
+SIGNAL SIZECOUNTV: INTEGER:= 0;
+
+
 SIGNAL LETTER: STD_LOGIC;
 
 SIGNAL HCOUNT: INTEGER RANGE 0 to 8 := 0;
@@ -142,41 +146,43 @@ BEGIN
 		IF( (HPOS<1048 AND HPOS>240) AND (VPOS<554 AND VPOS>42) ) then
 			--101 HORIZONTAL
 			--42 VERITCAL
-			--if('1' = ROM(VCOUNT)(HCOUNT) ) then
-			IF(1=TEST)THEN
+		if('0' = ROM(VCOUNT)(HCOUNT) ) then
+			--IF(1=TEST)THEN
 				R<=(OTHERS=>'1');
 				G<=(OTHERS=>'1');
 				B<=(OTHERS=>'1');
 			ELSE 
-				R<=(OTHERS=>'1');
+				R<=(OTHERS=>'1');--RED
 				G<=(OTHERS=>'0');
 				B<=(OTHERS=>'0');
 			END IF;
 								
-			if(HPOS>SIZEFONTH) then
- 				SIZEFONTH <= 101 + SIZEFONTH;
+			--IF(SIZECOUNTH>SIZEFONTH)THEN
 				if(HCOUNT<8)then
 					HCOUNT <= HCOUNT+1;
+				else
 					IF(1=TEST)THEN
 						TEST<=0;
 					ELSE
 						TEST<=1;
-					END IF;
-				else
-					SIZEFONTH <=101+240;
+					END IF; 
 					HCOUNT <= 0;
 				end if;
-			end if;
+			--else
+				--SIZECOUNTH<=SIZECOUNTH + 1;
+			--END IF;
 			
-			if(VPOS>SIZEFONTV)then
-				SIZEFONTV <=  42 + SIZEFONTV;
+			--if(SIZECOUNTV=SIZEFONTV)then
 				if(VCOUNT< 16)then
 					VCOUNT <= VCOUNT+1;
 				else
-					SIZEFONTV<=42+42;
 					VCOUNT <=0;
 				end if;
-			end if;
+			--end if;
+			IF (HPOS=)THEN
+			
+			END IF;
+			
 		ELSE
 			R<=(OTHERS=>'0');
 			G<=(OTHERS=>'0');
@@ -204,8 +210,10 @@ BEGIN
 		HPOS<=0;
 			IF(VPOS < 1066)THEN
 				VPOS<=VPOS+1;
+				--SIZECOUNTV<=SIZECOUNTV+1;
 				ELSE
 				VPOS<=0;
+				--SIZECOUNTV<=0;
 			END IF;
 		END IF;
 		
