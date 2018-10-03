@@ -100,4 +100,5 @@ set_location_assignment PIN_L25 -to display_right[4]
 set_location_assignment PIN_J22 -to display_right[5]
 set_location_assignment PIN_H22 -to display_right[6]
 set_location_assignment PIN_H6 -to ps2_clk
+set_global_assignment -name VHDL_FILE font_rom.vhd
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
