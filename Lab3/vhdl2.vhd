@@ -62,6 +62,8 @@ SIGNAL VCOUNT: INTEGER RANGE 0 to 8 := 0;
 type ROM_TYPE is array (0 to 15) of std_logic_vector(7 downto 0);
 SIGNAL ROM: ROM_TYPE;
 SIGNAL ASCII: STD_LOGIC_VECTOR(7 DOWNTO 0) := "01100101";
+SIGNAL TEST: INTEGER:=0;
+
 	
 BEGIN
 --the middle is ((BP,FP,Sync) + visible area/2)
@@ -134,16 +136,19 @@ PROCESS(CLK)
 BEGIN
 
 	IF(CLK'EVENT AND CLK='1') then
-
+	
+	
+		ASCII <= "01100101";
 		IF( (HPOS<1048 AND HPOS>240) AND (VPOS<554 AND VPOS>42) ) then
 			--101 HORIZONTAL
 			--42 VERITCAL
-			if('1' = ROM(VCOUNT)(HCOUNT) ) then
+			--if('1' = ROM(VCOUNT)(HCOUNT) ) then
+			IF(1=TEST)THEN
 				R<=(OTHERS=>'1');
 				G<=(OTHERS=>'1');
 				B<=(OTHERS=>'1');
 			ELSE 
-				R<=(OTHERS=>'0');
+				R<=(OTHERS=>'1');
 				G<=(OTHERS=>'0');
 				B<=(OTHERS=>'0');
 			END IF;
@@ -152,7 +157,13 @@ BEGIN
  				SIZEFONTH <= 101 + SIZEFONTH;
 				if(HCOUNT<8)then
 					HCOUNT <= HCOUNT+1;
+					IF(1=TEST)THEN
+						TEST<=0;
+					ELSE
+						TEST<=1;
+					END IF;
 				else
+					SIZEFONTH <=101+240;
 					HCOUNT <= 0;
 				end if;
 			end if;
@@ -162,6 +173,7 @@ BEGIN
 				if(VCOUNT< 16)then
 					VCOUNT <= VCOUNT+1;
 				else
+					SIZEFONTV<=42+42;
 					VCOUNT <=0;
 				end if;
 			end if;
@@ -190,11 +202,9 @@ BEGIN
 		HPOS<=HPOS+1;
 		ELSE
 		HPOS<=0;
-		SIZEFONTH <= 0;
 			IF(VPOS < 1066)THEN
 				VPOS<=VPOS+1;
 				ELSE
-				SIZEFONTV <= 0;
 				VPOS<=0;
 			END IF;
 		END IF;
