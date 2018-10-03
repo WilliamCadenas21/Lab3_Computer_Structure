@@ -1,6 +1,6 @@
 <sld_project_info>
   <project>
-    <hash md5_digest_80b="b0df1532ee2164a60e98"/>
+    <hash md5_digest_80b="ad249bddb7837197b06c"/>
   </project>
   <file_info>
     <file device="EP4CE115F29C7" path="Lab3.sof" usercode="0xFFFFFFFF"/>
@@ -8,7 +8,7 @@
   <sld_infos>
     <sld_info hpath="PLL:C2" name="C2">
       <assignment_values>
-        <assignment_value text="QSYS_NAME PLL HAS_SOPCINFO 1 GENERATION_ID 1537452879"/>
+        <assignment_value text="QSYS_NAME PLL HAS_SOPCINFO 1 GENERATION_ID 1538595303"/>
       </assignment_values>
       <parameters/>
     </sld_info>

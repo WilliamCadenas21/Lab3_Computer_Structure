@@ -18,8 +18,8 @@ END SYNC;
 ARCHITECTURE MAIN OF SYNC IS
 -----Model Hp L1710
 -----1280x1024 @ 60 Hz pixel clock 108 MHz
---- visible area 1280, front porch 48, sync pulse 112, back porch 248 --- whole line 1688
---- visible area 1024, front porch 1, sync pulse 3, back porch 38 --- whole line 1066
+--- visible area 1280, front porch 48, sync pulse 112, back porch 248 BLANKIN 240--- whole line 1688
+--- visible area 1024, front porch 1, sync pulse 3, back porch 38 BLANKIN 42--- whole line 1066
 
 
 -----Model hp zDisplayz22i
@@ -50,14 +50,18 @@ SIGNAL VPOS: INTEGER RANGE 0 TO 1066 :=0;
 --SIGNAL SQ_X1,SQ_Y1: INTEGER RANGE 0 TO 1688:=0;
 --SIGNAL RGB: STD_LOGIC_VECTOR(7 DOWNTO 0);
 --SIGNAL DRAW: STD_LOGIC;
-SIGNAL SIZEFONTH: INTEGER:= 211; --1688/8
-SIGNAL SIZEFONTV: INTEGER:= 211; --1066/12
+
+			--101 HORIZONTAL
+			--42 VERITCAL
+SIGNAL SIZEFONTH: INTEGER:= 101+240; --1688/8
+SIGNAL SIZEFONTV: INTEGER:= 42+42; --1066/12
 SIGNAL LETTER: STD_LOGIC;
+
 SIGNAL HCOUNT: INTEGER RANGE 0 to 8 := 0;
 SIGNAL VCOUNT: INTEGER RANGE 0 to 8 := 0;
 type ROM_TYPE is array (0 to 15) of std_logic_vector(7 downto 0);
 SIGNAL ROM: ROM_TYPE;
-SIGNAL ASCII: STD_LOGIC_VECTOR(7 DOWNTO 0) := "11111111";
+SIGNAL ASCII: STD_LOGIC_VECTOR(7 DOWNTO 0) := "01100101";
 	
 BEGIN
 --the middle is ((BP,FP,Sync) + visible area/2)
@@ -131,16 +135,9 @@ BEGIN
 
 	IF(CLK'EVENT AND CLK='1') then
 
---		IF(HPOS=1048 OR VPOS=554 ) then
---			R<=(OTHERS=>'1');
---			G<=(OTHERS=>'1');
---			B<=(OTHERS=>'1');
---		ELSE
---			R<=(OTHERS=>'0');
---			G<=(OTHERS=>'0');
---			B<=(OTHERS=>'0');
---		END IF;
-
+		IF( (HPOS<1048 AND HPOS>240) AND (VPOS<554 AND VPOS>42) ) then
+			--101 HORIZONTAL
+			--42 VERITCAL
 			if('1' = ROM(VCOUNT)(HCOUNT) ) then
 				R<=(OTHERS=>'1');
 				G<=(OTHERS=>'1');
@@ -150,9 +147,9 @@ BEGIN
 				G<=(OTHERS=>'0');
 				B<=(OTHERS=>'0');
 			END IF;
-		
-			if(HPOS=SIZEFONTH) then
- 				SIZEFONTH <= SIZEFONTH + SIZEFONTH;
+								
+			if(HPOS>SIZEFONTH) then
+ 				SIZEFONTH <= 101 + SIZEFONTH;
 				if(HCOUNT<8)then
 					HCOUNT <= HCOUNT+1;
 				else
@@ -160,14 +157,24 @@ BEGIN
 				end if;
 			end if;
 			
-			if(VPOS=SIZEFONTV)then
-				SIZEFONTV <=  SIZEFONTV + SIZEFONTV;
+			if(VPOS>SIZEFONTV)then
+				SIZEFONTV <=  42 + SIZEFONTV;
 				if(VCOUNT< 16)then
 					VCOUNT <= VCOUNT+1;
 				else
 					VCOUNT <=0;
 				end if;
 			end if;
+		ELSE
+			R<=(OTHERS=>'0');
+			G<=(OTHERS=>'0');
+			B<=(OTHERS=>'0');
+		END IF;
+		
+
+
+
+
 		
 	--	IF(DRAW='1')THEN
 	--		R<=RGB;

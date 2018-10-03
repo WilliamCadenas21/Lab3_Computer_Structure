@@ -1,5 +1,5 @@
 Flow report for Lab3
-Wed Oct 03 14:29:25 2018
+Wed Oct 03 17:01:47 2018
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -40,15 +40,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Wed Oct 03 14:29:18 2018       ;
+; Flow Status                        ; Successful - Wed Oct 03 17:01:39 2018       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; Lab3                                        ;
 ; Top-level Entity Name              ; lab3                                        ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 136 / 114,480 ( < 1 % )                     ;
-;     Total combinational functions  ; 112 / 114,480 ( < 1 % )                     ;
+; Total logic elements               ; 145 / 114,480 ( < 1 % )                     ;
+;     Total combinational functions  ; 121 / 114,480 ( < 1 % )                     ;
 ;     Dedicated logic registers      ; 102 / 114,480 ( < 1 % )                     ;
 ; Total registers                    ; 102                                         ;
 ; Total pins                         ; 44 / 529 ( 8 % )                            ;
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/03/2018 14:28:29 ;
+; Start date & time ; 10/03/2018 17:00:44 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Lab3                ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+-------------------------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                                 ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+-------------------------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 40368348300088.153859490801928                        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 40368348300088.153860404307548                        ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                                    ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                                     ; --            ; --          ; --         ;
 ; MISC_FILE                           ; PLL/synthesis/../PLL.cmp                              ; --            ; --          ; --         ;
@@ -88,7 +88,7 @@ refer to the applicable agreement for further details.
 ; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                 ; --            ; --          ; --         ;
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                                          ; --            ; --          ; --         ;
 ; SLD_FILE                            ; PLL/synthesis/PLL.debuginfo                           ; --            ; --          ; --         ;
-; SLD_INFO                            ; QSYS_NAME PLL HAS_SOPCINFO 1 GENERATION_ID 1537452879 ; --            ; PLL         ; --         ;
+; SLD_INFO                            ; QSYS_NAME PLL HAS_SOPCINFO 1 GENERATION_ID 1538595303 ; --            ; PLL         ; --         ;
 ; SOPCINFO_FILE                       ; PLL/synthesis/../../PLL.sopcinfo                      ; --            ; --          ; --         ;
 ; SYNTHESIS_ONLY_QIP                  ; On                                                    ; --            ; --          ; --         ;
 +-------------------------------------+-------------------------------------------------------+---------------+-------------+------------+
@@ -99,11 +99,11 @@ refer to the applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:19     ; 1.0                     ; 4813 MB             ; 00:00:42                           ;
-; Fitter                    ; 00:00:22     ; 1.0                     ; 5470 MB             ; 00:00:29                           ;
-; Assembler                 ; 00:00:05     ; 1.0                     ; 4702 MB             ; 00:00:05                           ;
-; TimeQuest Timing Analyzer ; 00:00:04     ; 1.1                     ; 4840 MB             ; 00:00:04                           ;
-; Total                     ; 00:00:50     ; --                      ; --                  ; 00:01:20                           ;
+; Analysis & Synthesis      ; 00:00:22     ; 1.0                     ; 4812 MB             ; 00:00:43                           ;
+; Fitter                    ; 00:00:23     ; 1.0                     ; 5477 MB             ; 00:00:30                           ;
+; Assembler                 ; 00:00:05     ; 1.0                     ; 4699 MB             ; 00:00:05                           ;
+; TimeQuest Timing Analyzer ; 00:00:05     ; 1.1                     ; 4844 MB             ; 00:00:04                           ;
+; Total                     ; 00:00:55     ; --                      ; --                  ; 00:01:22                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
