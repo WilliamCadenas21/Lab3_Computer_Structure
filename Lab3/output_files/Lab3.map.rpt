@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Lab3
-Wed Oct 03 18:16:03 2018
+Thu Oct 04 11:29:26 2018
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -54,15 +54,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Oct 03 18:16:03 2018       ;
+; Analysis & Synthesis Status        ; Successful - Thu Oct 04 11:29:26 2018       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; Lab3                                        ;
 ; Top-level Entity Name              ; lab3                                        ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 248                                         ;
-;     Total combinational functions  ; 226                                         ;
-;     Dedicated logic registers      ; 163                                         ;
-; Total registers                    ; 163                                         ;
+; Total logic elements               ; 156                                         ;
+;     Total combinational functions  ; 156                                         ;
+;     Dedicated logic registers      ; 111                                         ;
+; Total registers                    ; 111                                         ;
 ; Total pins                         ; 44                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -193,20 +193,20 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+----------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                      ;
 +---------------------------------------------+----------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 248                                                                        ;
+; Estimated Total logic elements              ; 156                                                                        ;
 ;                                             ;                                                                            ;
-; Total combinational functions               ; 226                                                                        ;
+; Total combinational functions               ; 156                                                                        ;
 ; Logic element usage by number of LUT inputs ;                                                                            ;
-;     -- 4 input functions                    ; 86                                                                         ;
-;     -- 3 input functions                    ; 20                                                                         ;
-;     -- <=2 input functions                  ; 120                                                                        ;
+;     -- 4 input functions                    ; 56                                                                         ;
+;     -- 3 input functions                    ; 11                                                                         ;
+;     -- <=2 input functions                  ; 89                                                                         ;
 ;                                             ;                                                                            ;
 ; Logic elements by mode                      ;                                                                            ;
-;     -- normal mode                          ; 115                                                                        ;
-;     -- arithmetic mode                      ; 111                                                                        ;
+;     -- normal mode                          ; 74                                                                         ;
+;     -- arithmetic mode                      ; 82                                                                         ;
 ;                                             ;                                                                            ;
-; Total registers                             ; 163                                                                        ;
-;     -- Dedicated logic registers            ; 163                                                                        ;
+; Total registers                             ; 111                                                                        ;
+;     -- Dedicated logic registers            ; 111                                                                        ;
 ;     -- I/O registers                        ; 0                                                                          ;
 ;                                             ;                                                                            ;
 ; I/O pins                                    ; 44                                                                         ;
@@ -217,9 +217,9 @@ refer to the applicable agreement for further details.
 ;     -- PLLs                                 ; 1                                                                          ;
 ;                                             ;                                                                            ;
 ; Maximum fan-out node                        ; PLL:C2|PLL_altpll_0:altpll_0|PLL_altpll_0_altpll_3742:sd1|wire_pll7_clk[0] ;
-; Maximum fan-out                             ; 111                                                                        ;
-; Total fan-out                               ; 1209                                                                       ;
-; Average fan-out                             ; 2.53                                                                       ;
+; Maximum fan-out                             ; 59                                                                         ;
+; Total fan-out                               ; 851                                                                        ;
+; Average fan-out                             ; 2.39                                                                       ;
 +---------------------------------------------+----------------------------------------------------------------------------+
 
 
@@ -228,11 +228,11 @@ refer to the applicable agreement for further details.
 +-----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------+--------------------------+--------------+
 ; Compilation Hierarchy Node              ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                             ; Entity Name              ; Library Name ;
 +-----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------+--------------------------+--------------+
-; |lab3                                   ; 226 (0)             ; 163 (0)                   ; 0           ; 0            ; 0       ; 0         ; 44   ; 0            ; |lab3                                                           ; lab3                     ; work         ;
+; |lab3                                   ; 156 (0)             ; 111 (0)                   ; 0           ; 0            ; 0       ; 0         ; 44   ; 0            ; |lab3                                                           ; lab3                     ; work         ;
 ;    |PLL:C2|                             ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab3|PLL:C2                                                    ; PLL                      ; pll          ;
 ;       |PLL_altpll_0:altpll_0|           ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab3|PLL:C2|PLL_altpll_0:altpll_0                              ; PLL_altpll_0             ; PLL          ;
 ;          |PLL_altpll_0_altpll_3742:sd1| ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab3|PLL:C2|PLL_altpll_0:altpll_0|PLL_altpll_0_altpll_3742:sd1 ; PLL_altpll_0_altpll_3742 ; PLL          ;
-;    |SYNC:C1|                            ; 154 (154)           ; 109 (109)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab3|SYNC:C1                                                   ; SYNC                     ; work         ;
+;    |SYNC:C1|                            ; 84 (84)             ; 57 (57)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab3|SYNC:C1                                                   ; SYNC                     ; work         ;
 ;    |lab2:C3|                            ; 72 (72)             ; 54 (54)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |lab3|lab2:C3                                                   ; lab2                     ; work         ;
 +-----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------+--------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -271,14 +271,26 @@ Encoding Type:  One-Hot
 +-----------------------------------------+----------------------------------------+
 ; Register name                           ; Reason for Removal                     ;
 +-----------------------------------------+----------------------------------------+
-; SYNC:C1|ASCII[0]                        ; Stuck at VCC due to stuck port data_in ;
-; SYNC:C1|ASCII[1]                        ; Stuck at GND due to stuck port data_in ;
-; SYNC:C1|ASCII[2]                        ; Stuck at VCC due to stuck port data_in ;
-; SYNC:C1|ASCII[3,4]                      ; Stuck at GND due to stuck port data_in ;
-; SYNC:C1|ASCII[5,6]                      ; Stuck at VCC due to stuck port data_in ;
-; SYNC:C1|ASCII[7]                        ; Stuck at GND due to stuck port data_in ;
+; SYNC:C1|B[1,5]                          ; Merged with SYNC:C1|R[7]               ;
+; SYNC:C1|G[5]                            ; Merged with SYNC:C1|R[7]               ;
+; SYNC:C1|B[7]                            ; Merged with SYNC:C1|R[7]               ;
+; SYNC:C1|G[3,7]                          ; Merged with SYNC:C1|R[7]               ;
+; SYNC:C1|B[3]                            ; Merged with SYNC:C1|R[7]               ;
+; SYNC:C1|R[3]                            ; Merged with SYNC:C1|R[7]               ;
+; SYNC:C1|B[0]                            ; Merged with SYNC:C1|R[7]               ;
+; SYNC:C1|R[2]                            ; Merged with SYNC:C1|R[7]               ;
+; SYNC:C1|G[0,2]                          ; Merged with SYNC:C1|R[7]               ;
+; SYNC:C1|R[0]                            ; Merged with SYNC:C1|R[7]               ;
+; SYNC:C1|B[6]                            ; Merged with SYNC:C1|R[7]               ;
+; SYNC:C1|R[4]                            ; Merged with SYNC:C1|R[7]               ;
+; SYNC:C1|B[4]                            ; Merged with SYNC:C1|R[7]               ;
+; SYNC:C1|G[6]                            ; Merged with SYNC:C1|R[7]               ;
+; SYNC:C1|B[2]                            ; Merged with SYNC:C1|R[7]               ;
+; SYNC:C1|R[6]                            ; Merged with SYNC:C1|R[7]               ;
+; SYNC:C1|G[4]                            ; Merged with SYNC:C1|R[7]               ;
+; SYNC:C1|R[1,5]                          ; Merged with SYNC:C1|R[7]               ;
+; SYNC:C1|G[1]                            ; Merged with SYNC:C1|R[7]               ;
 ; PLL:C2|PLL_altpll_0:altpll_0|prev_reset ; Stuck at GND due to stuck port data_in ;
-; SYNC:C1|SIZECOUNTV[0]                   ; Merged with SYNC:C1|VPOS[0]            ;
 ; lab2:C3|\comb_logic:contar[0..31]       ; Lost fanout                            ;
 ; lab2:C3|\comb_logic:contar2[0..31]      ; Lost fanout                            ;
 ; lab2:C3|\comb_logic:contar3[0..31]      ; Lost fanout                            ;
@@ -292,17 +304,7 @@ Encoding Type:  One-Hot
 ; lab2:C3|estado.fin                      ; Lost fanout                            ;
 ; lab2:C3|estado.breakLine                ; Lost fanout                            ;
 ; lab2:C3|estado.startagain               ; Lost fanout                            ;
-; SYNC:C1|SIZECOUNTV[1]                   ; Merged with SYNC:C1|VPOS[1]            ;
-; SYNC:C1|SIZECOUNTV[2]                   ; Merged with SYNC:C1|VPOS[2]            ;
-; SYNC:C1|SIZECOUNTV[3]                   ; Merged with SYNC:C1|VPOS[3]            ;
-; SYNC:C1|SIZECOUNTV[4]                   ; Merged with SYNC:C1|VPOS[4]            ;
-; SYNC:C1|SIZECOUNTV[5]                   ; Merged with SYNC:C1|VPOS[5]            ;
-; SYNC:C1|SIZECOUNTV[6]                   ; Merged with SYNC:C1|VPOS[6]            ;
-; SYNC:C1|SIZECOUNTV[7]                   ; Merged with SYNC:C1|VPOS[7]            ;
-; SYNC:C1|SIZECOUNTV[8]                   ; Merged with SYNC:C1|VPOS[8]            ;
-; SYNC:C1|SIZECOUNTV[9]                   ; Merged with SYNC:C1|VPOS[9]            ;
-; SYNC:C1|SIZECOUNTV[10]                  ; Merged with SYNC:C1|VPOS[10]           ;
-; Total Number of Removed Registers = 133 ;                                        ;
+; Total Number of Removed Registers = 137 ;                                        ;
 +-----------------------------------------+----------------------------------------+
 
 
@@ -337,12 +339,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 163   ;
-; Number of registers using Synchronous Clear  ; 75    ;
+; Total registers                              ; 111   ;
+; Number of registers using Synchronous Clear  ; 86    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 83    ;
+; Number of registers using Clock Enable       ; 25    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -375,7 +377,7 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output            ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
-; 5:1                ; 32 bits   ; 96 LEs        ; 32 LEs               ; 64 LEs                 ; Yes        ; |lab3|lab2:C3|\comb_logic:contar3[14] ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 32 LEs               ; 64 LEs                 ; Yes        ; |lab3|lab2:C3|\comb_logic:contar3[13] ;
 ; 7:1                ; 32 bits   ; 128 LEs       ; 32 LEs               ; 96 LEs                 ; Yes        ; |lab3|lab2:C3|\comb_logic:contar2[17] ;
 ; 8:1                ; 32 bits   ; 160 LEs       ; 32 LEs               ; 128 LEs                ; Yes        ; |lab3|lab2:C3|\comb_logic:contar[18]  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
@@ -461,24 +463,23 @@ Encoding Type:  One-Hot
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 44                          ;
-; cycloneiii_ff         ; 163                         ;
-;     ENA               ; 51                          ;
-;     ENA SCLR          ; 32                          ;
-;     SCLR              ; 43                          ;
-;     plain             ; 37                          ;
-; cycloneiii_lcell_comb ; 240                         ;
-;     arith             ; 111                         ;
-;         2 data inputs ; 109                         ;
-;         3 data inputs ; 2                           ;
-;     normal            ; 129                         ;
-;         1 data inputs ; 20                          ;
-;         2 data inputs ; 5                           ;
-;         3 data inputs ; 18                          ;
-;         4 data inputs ; 86                          ;
+; cycloneiii_ff         ; 111                         ;
+;     ENA               ; 14                          ;
+;     ENA SCLR          ; 11                          ;
+;     SCLR              ; 75                          ;
+;     plain             ; 11                          ;
+; cycloneiii_lcell_comb ; 170                         ;
+;     arith             ; 82                          ;
+;         2 data inputs ; 82                          ;
+;     normal            ; 88                          ;
+;         1 data inputs ; 18                          ;
+;         2 data inputs ; 3                           ;
+;         3 data inputs ; 11                          ;
+;         4 data inputs ; 56                          ;
 ; cycloneiii_pll        ; 1                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 6.00                        ;
-; Average LUT depth     ; 3.01                        ;
+; Max LUT depth         ; 4.10                        ;
+; Average LUT depth     ; 2.74                        ;
 +-----------------------+-----------------------------+
 
 
@@ -497,7 +498,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Wed Oct 03 18:15:38 2018
+    Info: Processing started: Thu Oct 04 11:28:59 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab3 -c Lab3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -527,8 +528,6 @@ Info (12128): Elaborating entity "PLL_altpll_0_stdsync_sv6" for hierarchy "PLL:C
 Info (12128): Elaborating entity "PLL_altpll_0_dffpipe_l2c" for hierarchy "PLL:C2|PLL_altpll_0:altpll_0|PLL_altpll_0_stdsync_sv6:stdsync2|PLL_altpll_0_dffpipe_l2c:dffpipe3" File: C:/Users/Estudiante/Desktop/Lab3_Computer_Structure/Lab3/PLL/synthesis/submodules/PLL_altpll_0.v Line: 116
 Info (12128): Elaborating entity "PLL_altpll_0_altpll_3742" for hierarchy "PLL:C2|PLL_altpll_0:altpll_0|PLL_altpll_0_altpll_3742:sd1" File: C:/Users/Estudiante/Desktop/Lab3_Computer_Structure/Lab3/PLL/synthesis/submodules/PLL_altpll_0.v Line: 282
 Info (12128): Elaborating entity "SYNC" for hierarchy "SYNC:C1" File: C:/Users/Estudiante/Desktop/Lab3_Computer_Structure/Lab3/lab3.vhd Line: 62
-Warning (10540): VHDL Signal Declaration warning at vhdl2.vhd(56): used explicit default value for signal "SIZEFONTH" because signal was never assigned a value File: C:/Users/Estudiante/Desktop/Lab3_Computer_Structure/Lab3/vhdl2.vhd Line: 56
-Warning (10540): VHDL Signal Declaration warning at vhdl2.vhd(57): used explicit default value for signal "SIZEFONTV" because signal was never assigned a value File: C:/Users/Estudiante/Desktop/Lab3_Computer_Structure/Lab3/vhdl2.vhd Line: 57
 Warning (12125): Using design file lab2.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info (12022): Found design unit 1: lab2-FSM File: C:/Users/Estudiante/Desktop/Lab3_Computer_Structure/Lab3/lab2.vhd Line: 33
     Info (12023): Found entity 1: lab2 File: C:/Users/Estudiante/Desktop/Lab3_Computer_Structure/Lab3/lab2.vhd Line: 8
@@ -539,15 +538,15 @@ Info (286030): Timing-Driven Synthesis is running
 Info (17049): 113 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 295 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 201 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 41 output pins
-    Info (21061): Implemented 250 logic cells
+    Info (21061): Implemented 156 logic cells
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 8 warnings
-    Info: Peak virtual memory: 4816 megabytes
-    Info: Processing ended: Wed Oct 03 18:16:03 2018
-    Info: Elapsed time: 00:00:25
-    Info: Total CPU time (on all processors): 00:00:43
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 4814 megabytes
+    Info: Processing ended: Thu Oct 04 11:29:26 2018
+    Info: Elapsed time: 00:00:27
+    Info: Total CPU time (on all processors): 00:00:50
 
 

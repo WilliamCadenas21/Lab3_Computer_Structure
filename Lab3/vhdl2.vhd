@@ -33,15 +33,15 @@ ARCHITECTURE MAIN OF SYNC IS
 --- visible area 480, front porch 11, sync pulse 2, back porch 31 BLANKIN 44 --- whole line 524
 
 ---CONFIGURATION
-SIGNAL TOTALLINESH:INTEGER := 800;
-SIGNAL FRONTPORCHH:INTEGER := 16;
-SIGNAL SYNCPULSEH:INTEGER := 96;
-SIGNAL BACKPORCHH:INTEGER := 48;
+--SIGNAL TOTALLINESH:INTEGER := 800;
+--SIGNAL FRONTPORCHH:INTEGER := 16;
+--SIGNAL SYNCPULSEH:INTEGER := 96;
+--SIGNAL BACKPORCHH:INTEGER := 48;
 
-SIGNAL TOTALLINESV:INTEGER := 524;
-SIGNAL FRONTPORCHV:INTEGER := 11;
-SIGNAL SYNCPULSEV:INTEGER := 2;
-SIGNAL BACKPORCHV:INTEGER := 31;
+--SIGNAL TOTALLINESV:INTEGER := 524;
+--SIGNAL FRONTPORCHV:INTEGER := 11;
+--SIGNAL SYNCPULSEV:INTEGER := 2;
+--SIGNAL BACKPORCHV:INTEGER := 31;
 
 SIGNAL HPOS: INTEGER RANGE 0 TO 1688:=0; 
 
@@ -59,10 +59,10 @@ SIGNAL SIZECOUNTH: INTEGER:= 0;
 SIGNAL SIZECOUNTV: INTEGER:= 0;
 
 
-SIGNAL LETTER: STD_LOGIC;
+SIGNAL LINES: STD_LOGIC_VECTOR(7 DOWNTO 0);
 
-SIGNAL HCOUNT: INTEGER RANGE 0 to 8 := 0;
-SIGNAL VCOUNT: INTEGER RANGE 0 to 8 := 0;
+SIGNAL HCOUNT: INTEGER:= 0;
+SIGNAL VCOUNT: INTEGER:= 0;
 type ROM_TYPE is array (0 to 15) of std_logic_vector(7 downto 0);
 SIGNAL ROM: ROM_TYPE;
 SIGNAL ASCII: STD_LOGIC_VECTOR(7 DOWNTO 0) := "01100101";
@@ -76,8 +76,19 @@ BEGIN
 
 PROCESS(ASCII)
 BEGIN
+		
+END PROCESS;
+
+
+
+PROCESS(CLK)
+BEGIN
+
+	IF(CLK'EVENT AND CLK='1') then
+		ASCII <= "01100101";
+		
 		case ASCII is
-			when "01100101" => ROM <= (
+			when "01100101" => ROM<= (
 			"00000000", -- 0
 			"00000000", -- 1
 			"00010000", -- 2    *
@@ -113,7 +124,7 @@ BEGIN
 			"11111111", -- e
 			"11111111" -- f
 			);
-			when others => ROM <=(
+			when others => ROM <=  (
 			"00000000", -- 0
 			"00000000", -- 1
 			"01111110", -- 2  ******
@@ -132,94 +143,70 @@ BEGIN
 			"00000000" -- f
 			);
 		end case;
-END PROCESS;
-
-
-
-PROCESS(CLK)
-BEGIN
-
-	IF(CLK'EVENT AND CLK='1') then
-	
-	
-		ASCII <= "01100101";
-		IF( (HPOS<1048 AND HPOS>240) AND (VPOS<554 AND VPOS>42) ) then
-			--101 HORIZONTAL
-			--42 VERITCAL
-		if('0' = ROM(VCOUNT)(HCOUNT) ) then
-			--IF(1=TEST)THEN
-				R<=(OTHERS=>'1');
+		
+--		IF( (HPOS<1048 AND HPOS>240) AND (VPOS<554 AND VPOS>42) ) then
+		
+--			IF(VCOUNT=16)THEN
+--				R<=(OTHERS=>'1');--GREN
+--				G<=(OTHERS=>'1');
+--				B<=(OTHERS=>'0');
+--			END IF;
+		
+			IF(HCOUNT <8)THEN
+				R<=(OTHERS=>'1');--RED
 				G<=(OTHERS=>'1');
 				B<=(OTHERS=>'1');
-			ELSE 
-				R<=(OTHERS=>'1');--RED
-				G<=(OTHERS=>'0');
-				B<=(OTHERS=>'0');
-			END IF;
-								
-			--IF(SIZECOUNTH>SIZEFONTH)THEN
-				if(HCOUNT<8)then
-					HCOUNT <= HCOUNT+1;
-				else
-					IF(1=TEST)THEN
-						TEST<=0;
-					ELSE
-						TEST<=1;
-					END IF; 
-					HCOUNT <= 0;
-				end if;
-			--else
-				--SIZECOUNTH<=SIZECOUNTH + 1;
-			--END IF;
-			
-			--if(SIZECOUNTV=SIZEFONTV)then
-				if(VCOUNT< 16)then
-					VCOUNT <= VCOUNT+1;
-				else
-					VCOUNT <=0;
-				end if;
-			--end if;
-			IF (HPOS=)THEN
-			
 			END IF;
 			
-		ELSE
-			R<=(OTHERS=>'0');
-			G<=(OTHERS=>'0');
-			B<=(OTHERS=>'0');
-		END IF;
-		
-
-
-
-
-		
-	--	IF(DRAW='1')THEN
-	--		R<=RGB;
-	--		G<=RGB;
-	--		B<=RGB;
-	--		ELSE
-	--		R<=(OTHERS=>'0');
-	--		G<=(OTHERS=>'0');
-	--		B<=(OTHERS=>'0');
-	--	END IF;
-
-		IF(HPOS < 1688)THEN
-		HPOS<=HPOS+1;
-		ELSE
-		HPOS<=0;
-			IF(VPOS < 1066)THEN
-				VPOS<=VPOS+1;
-				--SIZECOUNTV<=SIZECOUNTV+1;
+			IF("00000000" /= ROM(VCOUNT))THEN
+				LINES <= ROM(VCOUNT);
+				
+				IF('1'=LINES(HCOUNT))THEN
+--					R<=(OTHERS=>'1');--WHITE
+--					G<=(OTHERS=>'1');
+--					B<=(OTHERS=>'1');
 				ELSE
+--					R<=(OTHERS=>'0');--GREN
+--					G<=(OTHERS=>'1');
+--					B<=(OTHERS=>'0');
+				END IF;
+			ELSE 
+--				R<=(OTHERS=>'1');--RED
+--				G<=(OTHERS=>'0');
+--				B<=(OTHERS=>'0');
+			END IF;
+			
+			IF(HCOUNT<8)THEN
+				HCOUNT <= HCOUNT+1;
+			ELSE
+				HCOUNT <= 0;
+			END IF;	
+--	   ELSE
+--			R<=(OTHERS=>'0');
+--			G<=(OTHERS=>'0');
+--			B<=(OTHERS=>'0');
+--			HCOUNT <= 0;	
+--		END IF;
+		
+		
+		IF(HPOS < 1688)THEN 
+			HPOS<=HPOS+1;
+		ELSE
+			HPOS<=0;
+			IF(VPOS < 1066)THEN
+				IF(VCOUNT < 16)THEN
+					VCOUNT <= VCOUNT+1;
+				ELSE
+					VCOUNT <=0;
+				END IF;
+				VPOS<=VPOS+1;
+			ELSE
 				VPOS<=0;
-				--SIZECOUNTV<=0;
 			END IF;
 		END IF;
 		
 		--HPOS>FRONTPORCHH AND HPOS< FRONTH+SYNCH 
 		IF (HPOS>48 AND HPOS<160)THEN 
-		
 			HSYNC<='0';
 			ELSE
 			HSYNC<='1';
@@ -239,6 +226,7 @@ BEGIN
 			B<=(OTHERS=>'0');	
 		END IF;
 		
+
 	END IF;	
 END PROCESS;
 END MAIN;

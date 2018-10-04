@@ -1,5 +1,5 @@
 Flow report for Lab3
-Wed Oct 03 18:16:33 2018
+Thu Oct 04 11:30:02 2018
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -40,17 +40,17 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Wed Oct 03 18:16:27 2018       ;
+; Flow Status                        ; Successful - Thu Oct 04 11:29:55 2018       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; Lab3                                        ;
 ; Top-level Entity Name              ; lab3                                        ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 248 / 114,480 ( < 1 % )                     ;
-;     Total combinational functions  ; 226 / 114,480 ( < 1 % )                     ;
-;     Dedicated logic registers      ; 163 / 114,480 ( < 1 % )                     ;
-; Total registers                    ; 163                                         ;
+; Total logic elements               ; 157 / 114,480 ( < 1 % )                     ;
+;     Total combinational functions  ; 156 / 114,480 ( < 1 % )                     ;
+;     Dedicated logic registers      ; 111 / 114,480 ( < 1 % )                     ;
+; Total registers                    ; 111                                         ;
 ; Total pins                         ; 44 / 529 ( 8 % )                            ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0 / 3,981,312 ( 0 % )                       ;
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/03/2018 18:15:39 ;
+; Start date & time ; 10/04/2018 11:29:00 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Lab3                ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+-------------------------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                                 ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+-------------------------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 180649680037036.153860853812880                       ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 180649680036786.153867054015604                       ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                                    ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                                     ; --            ; --          ; --         ;
 ; MISC_FILE                           ; PLL/synthesis/../PLL.cmp                              ; --            ; --          ; --         ;
@@ -99,11 +99,11 @@ refer to the applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:24     ; 1.0                     ; 4816 MB             ; 00:00:43                           ;
-; Fitter                    ; 00:00:16     ; 1.0                     ; 5743 MB             ; 00:00:24                           ;
-; Assembler                 ; 00:00:03     ; 1.0                     ; 4702 MB             ; 00:00:04                           ;
-; TimeQuest Timing Analyzer ; 00:00:03     ; 1.2                     ; 4865 MB             ; 00:00:03                           ;
-; Total                     ; 00:00:46     ; --                      ; --                  ; 00:01:14                           ;
+; Analysis & Synthesis      ; 00:00:27     ; 1.0                     ; 4814 MB             ; 00:00:49                           ;
+; Fitter                    ; 00:00:19     ; 1.0                     ; 5737 MB             ; 00:00:28                           ;
+; Assembler                 ; 00:00:04     ; 1.0                     ; 4698 MB             ; 00:00:04                           ;
+; TimeQuest Timing Analyzer ; 00:00:04     ; 1.2                     ; 4866 MB             ; 00:00:04                           ;
+; Total                     ; 00:00:54     ; --                      ; --                  ; 00:01:25                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -112,10 +112,10 @@ refer to the applicable agreement for further details.
 +---------------------------+------------------+------------+------------+----------------+
 ; Module Name               ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +---------------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis      ; 105060-docent-p  ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter                    ; 105060-docent-p  ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler                 ; 105060-docent-p  ; Windows 10 ; 10.0       ; x86_64         ;
-; TimeQuest Timing Analyzer ; 105060-docent-p  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis      ; 105053-docent-p  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter                    ; 105053-docent-p  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler                 ; 105053-docent-p  ; Windows 10 ; 10.0       ; x86_64         ;
+; TimeQuest Timing Analyzer ; 105053-docent-p  ; Windows 10 ; 10.0       ; x86_64         ;
 +---------------------------+------------------+------------+------------+----------------+
 
 
