@@ -1,0 +1,367 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity keyboard_reader is
+port(
+	-- Pin used to emulate the clk_keyboard cycles
+	clk_keyboard: in std_logic;
+	-- Pin used for data input
+	data: in std_logic;
+	-- Pins of the first seven segments display from left to right to show the number
+	number_1:	out std_logic_vector(6 DOWNTO 0);
+	-- Pins of the second seven segments display from left to right to show the number
+	number_2: 	out  std_logic_vector(6 DOWNTO 0);	
+	
+	clk:		in std_logic;    --Clock to keep trak of time
+	lcd:		out std_logic_vector(7 downto 0);  --LCD data pins
+	enviar : out std_logic;    --Send signal
+	rs:		out std_logic;    --Data or command
+	rw: out std_logic    --read/write
+);
+	-- Convert a bynary number of 4 bits to it's representation in a seven segments display
+	function VECTOR_TO_DISPLAY (number: unsigned(3 DOWNTO 0)) 
+		return std_logic_vector is
+		VARIABLE data: std_logic_vector(6 DOWNTO 0);
+	begin		
+		case number is
+			when "0000" => data := "1000000";
+			when "0001" => data := "1111001";
+			when "0010" => data := "0100100";
+			when "0011" => data := "0110000";
+			when "0100" => data := "0011001";
+			when "0101" => data := "0010010";
+			when "0110" => data := "0000010";
+			when "0111" => data := "1111000";
+			when "1000" => data := "0000000";
+			when "1001" => data := "0010000";
+			when "1010" => data := "0001000";
+			when "1011" => data := "0000011";
+			when "1100" => data := "1000110";
+			when "1101" => data := "0100001";
+			when "1110" => data := "0000110";
+			when "1111" => data := "1111111";
+			when others => data := "1111111";
+		end case;	
+		
+		-- return the seven segment display representation f the given number
+		return std_logic_vector(data);
+	 end VECTOR_TO_DISPLAY; 	 
+
+	 
+	-- Convert a bynary number of 4 bits to it's representation in a seven segments display
+	function VECTOR_TO_DISPLAY2 (number: unsigned(3 DOWNTO 0)) 
+		return std_logic_vector is
+		VARIABLE data: std_logic_vector(6 DOWNTO 0);
+	begin		
+		case number is
+			when "0000" => data := "1111111";
+			when "0001" => data := "1111001";
+			when "0010" => data := "0100100";
+			when "0011" => data := "0110000";
+			when "0100" => data := "0011001";
+			when "0101" => data := "0010010";
+			when "0110" => data := "0000010";
+			when "0111" => data := "1111000";
+			when "1000" => data := "0000000";
+			when "1001" => data := "0010000";
+			when "1010" => data := "0001000";
+			when "1011" => data := "0000011";
+			when "1100" => data := "1000110";
+			when "1101" => data := "0100001";
+			when "1110" => data := "0000110";
+			when "1111" => data := "0001110";
+			when others => data := "1111111";
+		end case;	
+		
+		-- return the seven segment display representation f the given number
+		return std_logic_vector(data);
+	 end VECTOR_TO_DISPLAY2; 	
+	
+	--convert a scan code to it's ascii code
+	function SCAN_TO_lcd (scan_code: unsigned(7 DOWNTO 0)) 
+		return std_logic_vector is
+		VARIABLE lcd: std_logic_vector(7 DOWNTO 0);
+	begin
+		case scan_code is
+			when "00001110" => lcd := "01100000";
+			when "00010110" => lcd := "00110001";
+			when "00011110" => lcd := "00110010";
+			when "00100110" => lcd := "00110011";
+			when "00100101" => lcd := "00110100";
+			when "00101110" => lcd := "00110101";
+			when "00110110" => lcd := "00110110";
+			when "00111101" => lcd := "00110111";
+			when "00111110" => lcd := "00111000";
+			when "01000110" => lcd := "00111001";
+			when "01000101" => lcd := "00110000";
+			when "01001110" => lcd := "00101101";
+			when "01010101" => lcd := "00111101";
+			when "00010101" => lcd := "01010001";
+			when "00011101" => lcd := "01010111";
+			when "00100100" => lcd := "01000101";
+			when "00101101" => lcd := "01010010";
+			when "00101100" => lcd := "01010100";
+			when "00110101" => lcd := "01011001";
+			when "00111100" => lcd := "01010101";
+			when "01000011" => lcd := "01001001";
+			when "01000100" => lcd := "01001111";
+			when "01001101" => lcd := "01010000";
+			when "01010100" => lcd := "01011011";
+			when "01011011" => lcd := "01011101";
+			when "01011100" => lcd := "01011100";
+			when "00011100" => lcd := "01000001";
+			when "00011011" => lcd := "01010011";
+			when "00100011" => lcd := "01000100";
+			when "00101011" => lcd := "01000110";
+			when "00110100" => lcd := "01000111";
+			when "00110011" => lcd := "01001000";
+			when "00111011" => lcd := "01001010";
+			when "01000010" => lcd := "01001011";
+			when "01001011" => lcd := "01001100";
+			when "01001100" => lcd := "00111011";
+			when "00011010" => lcd := "01011010";
+			when "00100010" => lcd := "01011000";
+			when "00100001" => lcd := "01000011";
+			when "00101010" => lcd := "01010110";
+			when "00110010" => lcd := "01000010";
+			when "00110001" => lcd := "01001110";
+			when "00111010" => lcd := "01001101";
+			when "01000001" => lcd := "00101100";
+			when "01001001" => lcd := "00101110";
+			when "01001010" => lcd := "00101111";
+			when others => lcd := "00000000";
+		end case;
+		return lcd;
+	end SCAN_TO_lcd;
+	
+end keyboard_reader;
+
+-----------------------------------------------------
+
+architecture FSM of keyboard_reader is
+	 -- Is the counter
+	 signal counter: integer := 0;
+	 -- Is the data
+	 signal data_vector: unsigned(10 DOWNTO 0);
+	 signal display: std_logic := '0';
+	 
+	 signal col: integer := 0;
+	 
+	 type state_type is (encender, configpantalla,encenderdisplay, limpiardisplay, configcursor,listo, espera,fin, cambiarlinea);    --Define dfferent states to control the LCD
+    signal estado: state_type;
+	 
+	 constant milisegundos: integer := 50000;
+	 constant microsegundos: integer := 50;
+begin    
+	
+-- cocurrent process#1: number displayer
+-- Pass the numbers to the seven segments displays
+   show: process(display)
+	begin
+		number_1 <= VECTOR_TO_DISPLAY(data_vector(8 DOWNTO 5));
+		number_2 <= VECTOR_TO_DISPLAY2(data_vector(4 DOWNTO 1));
+   end process;
+	
+	-- cocurrent process#2: read data
+	reader: process(clk_keyboard)
+	begin
+		if(clk_keyboard'event and clk_keyboard = '0') then
+			counter <= counter + 1;	
+			data_vector(counter) <= data;
+		end if;
+		
+		if (counter > 10) then
+			counter <= 0;
+		end if;	
+		
+		if (counter = 10 and data_vector(8 downto 1) /= "11110000") then
+			display <= not display;
+		end if;
+	end process;
+	
+	-- Where the magic happen, it controls the LCD output
+	comb_logic: process(clk, col, counter)
+  variable contar: integer := 0;
+  variable d: integer :=1;
+  begin
+	if (clk'event and clk='1') then
+	  case estado is
+	    when encender =>
+		  if (contar < 50*milisegundos) then    --Wait for the LCD to start all its components
+				contar := contar + 1;
+				estado <= encender;
+			else
+				enviar <= '0';
+				contar := 0; 
+				estado <= configpantalla;
+			end if;
+			--From this point we will send diffrent configuration commands as shown in class
+			--You should check the manual to understand what configurations we are sending to
+			--The display. You have to wait between each command for the LCD to take configurations.
+	    when configpantalla =>
+			if (contar = 0) then
+				contar := contar +1;
+				rs <= '0';
+				rw <= '0';
+				lcd <= "00111000";
+				enviar <= '1';
+				estado <= configpantalla;
+			elsif (contar < 1*milisegundos) then
+				contar := contar + 1;
+				estado <= configpantalla;
+			else
+				enviar <= '0';
+				contar := 0;
+				estado <= encenderdisplay;
+			end if;
+	    when encenderdisplay =>
+			if (contar = 0) then
+				contar := contar +1;
+				lcd <= "00001111";				
+				enviar <= '1';
+				estado <= encenderdisplay;
+			elsif (contar < 1*milisegundos) then
+				contar := contar + 1;
+				estado <= encenderdisplay;
+			else
+				enviar <= '0';
+				contar := 0;
+				estado <= limpiardisplay;
+			end if;
+	    when limpiardisplay =>	
+			if (contar = 0) then
+				contar := contar +1;
+				lcd <= "00000001";				
+				enviar <= '1';
+				estado <= limpiardisplay;
+			elsif (contar < 1*milisegundos) then
+				contar := contar + 1;
+				estado <= limpiardisplay;
+			else
+				enviar <= '0';
+				contar := 0;
+				estado <= configcursor;
+			end if;
+	    when configcursor =>	
+			if (contar = 0) then
+				contar := contar +1;
+				lcd <= "00000100";				
+				enviar <= '1';
+				estado <= configcursor;
+			elsif (contar < 1*milisegundos) then
+				contar := contar + 1;
+				estado <= configcursor;
+			else
+				enviar <= '0';
+				contar := 0;
+				estado <= listo;
+			end if;
+			--The display is now configured now it you just can send data to de LCD 
+			--In this example we are just sending letter A, for this project you
+			--Should make it variable for what has been pressed on the keyboard.
+	    when listo =>	
+			if (contar = 0) then
+				rs <= '1';
+				rw <= '0';
+				enviar <= '1';
+				-- Convert from scan code to ascii code
+				if counter = 10 and data_vector(8 downto 1) /= "11110000" then
+					case data_vector(8 DOWNTO 1) is
+					when "00001110" => lcd <= "01100000";
+					when "00010110" => lcd <= "00110001";
+					when "00011110" => lcd <= "00110010";
+					when "00100110" => lcd <= "00110011";
+					when "00100101" => lcd <= "00110100";
+					when "00101110" => lcd <= "00110101";
+					when "00110110" => lcd <= "00110110";
+					when "00111101" => lcd <= "00110111";
+					when "00111110" => lcd <= "00111000";
+					when "01000110" => lcd <= "00111001";
+					when "01000101" => lcd <= "00110000";
+					when "01001110" => lcd <= "00101101";
+					when "01010101" => lcd <= "00111101";
+					when "00010101" => lcd <= "01010001";
+					when "00011101" => lcd <= "01010111";
+					when "00100100" => lcd <= "01000101";
+					when "00101101" => lcd <= "01010010";
+					when "00101100" => lcd <= "01010100";
+					when "00110101" => lcd <= "01011001";
+					when "00111100" => lcd <= "01010101";
+					when "01000011" => lcd <= "01001001";
+					when "01000100" => lcd <= "01001111";
+					when "01001101" => lcd <= "01010000";
+					when "01010100" => lcd <= "01011011";
+					when "01011011" => lcd <= "01011101";
+					when "01011100" => lcd <= "01011100";
+					when "00011100" => lcd <= "01000001";
+					when "00011011" => lcd <= "01010011";
+					when "00100011" => lcd <= "01000100";
+					when "00101011" => lcd <= "01000110";
+					when "00110100" => lcd <= "01000111";
+					when "00110011" => lcd <= "01001000";
+					when "00111011" => lcd <= "01001010";
+					when "01000010" => lcd <= "01001011";
+					when "01001011" => lcd <= "01001100";
+					when "01001100" => lcd <= "00111011";
+					when "00011010" => lcd <= "01011010";
+					when "00100010" => lcd <= "01011000";
+					when "00100001" => lcd <= "01000011";
+					when "00101010" => lcd <= "01010110";
+					when "00110010" => lcd <= "01000010";
+					when "00110001" => lcd <= "01001110";
+					when "00111010" => lcd <= "01001101";
+					when "01000001" => lcd <= "00101100";
+					when "01001001" => lcd <= "00101110";
+					when "01001010" => lcd <= "00101111";
+					when "00101001" => lcd <= "00100000";
+					when others => lcd <= "00000000";
+				end case;
+				end if;
+				
+				-- Jump form a line to the next
+				col <= col + 1;
+				if col > 15 and d = 1 then
+					rs <= '0';
+					rw <= '0';
+					lcd <= "11000000";
+					col <= 0;
+					d :=2;
+				elsif col > 15 and d = 2 then
+					rs <= '0';
+					rw <= '0';
+					lcd <= "00000001";
+					col <= 0;
+					d := 1;
+				end if;
+				
+				contar := contar + 1;
+				estado <= listo;
+					
+			elsif (contar < 120*milisegundos) then
+				contar := contar + 1;
+				estado <= listo;
+			else
+				enviar <= '0';
+				contar := 0;
+				
+				estado <= fin;
+			end if;
+			
+		-- Estado final
+		when fin =>
+			contar := 0;
+			
+			if (counter = 10) then
+				estado <= listo;
+			else
+				estado <= fin;
+			end if;
+
+	   when others =>
+			estado <= encender;
+	  end case;
+	end if;
+ end process;
+	
+end architecture FSM;

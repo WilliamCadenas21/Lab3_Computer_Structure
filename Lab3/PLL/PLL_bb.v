@@ -1,10 +1,10 @@
 
 module PLL (
 	clk_in_clk,
-	clk_out_clk,
-	reset_reset);	
+	reset_reset,
+	clk_out_clk);	
 
 	input		clk_in_clk;
-	output		clk_out_clk;
 	input		reset_reset;
+	output		clk_out_clk;
 endmodule
