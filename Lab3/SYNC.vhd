@@ -9,8 +9,6 @@ PORT(
 	CLK:				IN 	STD_LOGIC; --PLL
 	HSYNC, VSYNC:	OUT 	STD_LOGIC; -- HORIZONTAL AND VERTICAL SYNCRONIZATION
 	R, G, B:			OUT 	STD_LOGIC_VECTOR(7 DOWNTO 0); -- COLORS
-	CLK_KEYBOARD:	IN STD_LOGIC;
-	DATA_KEY:		IN STD_LOGIC;
 	CLK_50:			IN STD_LOGIC
 );
 END SYNC;
@@ -36,21 +34,12 @@ ARCHITECTURE MAIN OF SYNC IS
 			dataInA: in std_logic_vector(dataWidth-1 DOWNTO 0)
 		);
 	END COMPONENT fontROM;
-	
-	-- KEYBOARD COMPONENT 
-	COMPONENT keyboard_reader IS
-		PORT(
-			clk_keyboard: in std_logic; -- Pin used to emulate the clk_keyboard cycles
-			data: 			in std_logic;	 -- Pin used for data input
-			clk:				in std_logic    --Clock to keep trak of time
-		);
-	END COMPONENT keyboard_reader;
+
 	
 BEGIN
 
-	C3:	fontROM PORT MAP(CLK, '0', ADDR, TEMP, "00000000");
-	C4:	keyboard_reader PORT MAP(CLK_KEYBOARD, DATA_KEY, CLK_50);
-
+	C1: fontROM PORT MAP(CLK, '0', ADDR, TEMP, "00000000");
+	
 	PROCESS(CLK)
 	BEGIN
 		IF (CLK'EVENT AND CLK='1') THEN

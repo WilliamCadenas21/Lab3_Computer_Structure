@@ -9,8 +9,8 @@ PORT(
 	VGA_R, VGA_G, VGA_B: OUT STD_LOGIC_VECTOR(7 downto 0); -- COLORS
 	VGA_CLOCK:				OUT STD_LOGIC;	-- VGA CLOCK OUT
 	
-	KEYB_CLOCK:				IN STD_LOGIC;
-	KEYDATA:					IN STD_LOGIC
+	PS2_CLK:	 IN STD_LOGIC;
+	PS2_DATA: IN STD_LOGIC
 );
 END VGA;
 
@@ -18,8 +18,6 @@ ARCHITECTURE MAIN OF VGA IS
 
 
 	SIGNAL VGACLK, RESET:	STD_LOGIC := '0';
-	
-	------------------------------
 
 	-- PLL
 	COMPONENT PLL IS
@@ -30,22 +28,28 @@ ARCHITECTURE MAIN OF VGA IS
 	);
 	END COMPONENT PLL;
 	
-	------------------------------
-	
-	-- SYN
+	-- SYNC
 	COMPONENT SYNC IS
 	PORT(
 		CLK:				IN 	STD_LOGIC; --PLL
 		HSYNC, VSYNC:	OUT 	STD_LOGIC;
-		R, G, B:			OUT 	STD_LOGIC_VECTOR(7 downto 0);
-		CLK_KEYBOARD:	IN STD_LOGIC;
-		DATA_KEY:		IN STD_LOGIC;
-		CLK_50:			IN STD_LOGIC
+		R, G, B:			OUT 	STD_LOGIC_VECTOR(7 downto 0)
 	);
 	END COMPONENT SYNC;
 	
+	-- KEYBOARD COMPONENT 
+	COMPONENT keyboard IS
+		PORT(
+			clk_keyboard: IN 	STD_LOGIC; -- Pin used to emulate the clk_keyboard cycles
+			data: 			IN 	STD_LOGIC	 -- Pin used for data input 
+		);
+	END COMPONENT keyboard;
+	
+	
+	
 BEGIN
-	C1: SYNC PORT MAP(VGACLK, VGA_HS, VGA_VS, VGA_R, VGA_G, VGA_B, KEYB_CLOCK, KEYDATA, CLOCK_50);
+	C1: SYNC PORT MAP(VGACLK, VGA_HS, VGA_VS, VGA_R, VGA_G, VGA_B);
 	C2: PLL PORT MAP(CLOCK_50, RESET, VGACLK);
+	C3:	keyboard PORT MAP(PS2_CLK, PS2_DATA);
 	VGA_CLOCK <= VGACLK;
 END MAIN;

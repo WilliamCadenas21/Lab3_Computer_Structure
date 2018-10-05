@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for vga
-Thu Oct 04 15:31:19 2018
+Thu Oct 04 19:09:49 2018
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -93,15 +93,15 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
 ;                            ;             ;
-; Average used               ; 1.01        ;
-; Maximum used               ; 4           ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.4%      ;
+;     Processor 2            ;   0.3%      ;
 +----------------------------+-------------+
 
 
@@ -176,30 +176,30 @@ No paths to report.
 +--------+--------------------------------------------------------------------------------------------------------+--------------+-----------------------------+-----------------------------+--------------+------------+------------+
 ; Slack  ; From Node                                                                                              ; To Node      ; Launch Clock                ; Latch Clock                 ; Relationship ; Clock Skew ; Data Delay ;
 +--------+--------------------------------------------------------------------------------------------------------+--------------+-----------------------------+-----------------------------+--------------+------------+------------+
-; 30.747 ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|R[5] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.392     ; 8.588      ;
-; 30.748 ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|B[7] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.392     ; 8.587      ;
-; 30.749 ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|B[3] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.392     ; 8.586      ;
-; 30.750 ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|B[4] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.392     ; 8.585      ;
-; 30.751 ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|R[2] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.392     ; 8.584      ;
-; 30.751 ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|B[5] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.392     ; 8.584      ;
-; 30.755 ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|R[1] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.392     ; 8.580      ;
-; 30.756 ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|R[3] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.392     ; 8.579      ;
-; 30.756 ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|B[1] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.392     ; 8.579      ;
-; 30.757 ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|R[0] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.392     ; 8.578      ;
-; 30.758 ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|B[0] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.392     ; 8.577      ;
-; 30.887 ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|G[2] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.390     ; 8.450      ;
-; 30.887 ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|G[5] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.390     ; 8.450      ;
-; 30.888 ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|G[3] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.390     ; 8.449      ;
-; 30.889 ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|G[1] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.390     ; 8.448      ;
-; 30.890 ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|G[0] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.390     ; 8.447      ;
-; 30.890 ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|G[7] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.390     ; 8.447      ;
-; 30.892 ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|G[6] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.390     ; 8.445      ;
-; 30.892 ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|B[6] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.390     ; 8.445      ;
-; 30.893 ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|B[2] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.390     ; 8.444      ;
-; 30.894 ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|R[4] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.390     ; 8.443      ;
-; 30.894 ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|R[6] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.390     ; 8.443      ;
-; 30.895 ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|R[7] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.390     ; 8.442      ;
-; 30.895 ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|G[4] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.390     ; 8.442      ;
+; 30.747 ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|R[5] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.392     ; 8.588      ;
+; 30.748 ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|B[7] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.392     ; 8.587      ;
+; 30.749 ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|B[3] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.392     ; 8.586      ;
+; 30.750 ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|B[4] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.392     ; 8.585      ;
+; 30.751 ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|R[2] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.392     ; 8.584      ;
+; 30.751 ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|B[5] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.392     ; 8.584      ;
+; 30.755 ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|R[1] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.392     ; 8.580      ;
+; 30.756 ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|R[3] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.392     ; 8.579      ;
+; 30.756 ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|B[1] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.392     ; 8.579      ;
+; 30.757 ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|R[0] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.392     ; 8.578      ;
+; 30.758 ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|B[0] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.392     ; 8.577      ;
+; 30.887 ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|G[2] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.390     ; 8.450      ;
+; 30.887 ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|G[5] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.390     ; 8.450      ;
+; 30.888 ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|G[3] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.390     ; 8.449      ;
+; 30.889 ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|G[1] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.390     ; 8.448      ;
+; 30.890 ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|G[0] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.390     ; 8.447      ;
+; 30.890 ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|G[7] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.390     ; 8.447      ;
+; 30.892 ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|G[6] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.390     ; 8.445      ;
+; 30.892 ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|B[6] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.390     ; 8.445      ;
+; 30.893 ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|B[2] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.390     ; 8.444      ;
+; 30.894 ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|R[4] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.390     ; 8.443      ;
+; 30.894 ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|R[6] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.390     ; 8.443      ;
+; 30.895 ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|R[7] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.390     ; 8.442      ;
+; 30.895 ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|G[4] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.390     ; 8.442      ;
 ; 32.230 ; SYNC:C1|VPOS[1]                                                                                        ; SYNC:C1|R[5] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.020     ; 7.477      ;
 ; 32.231 ; SYNC:C1|VPOS[1]                                                                                        ; SYNC:C1|B[7] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.020     ; 7.476      ;
 ; 32.232 ; SYNC:C1|VPOS[1]                                                                                        ; SYNC:C1|B[3] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.020     ; 7.475      ;
@@ -312,10 +312,10 @@ No paths to report.
 ; 0.677 ; SYNC:C1|ADDR[0] ; SYNC:C1|ADDR[2]                                                                                        ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 0.000        ; 0.077      ; 0.940      ;
 ; 0.678 ; SYNC:C1|VPOS[5] ; SYNC:C1|VPOS[5]                                                                                        ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 0.000        ; 0.077      ; 0.941      ;
 ; 0.680 ; SYNC:C1|VPOS[0] ; SYNC:C1|VPOS[0]                                                                                        ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 0.000        ; 0.077      ; 0.943      ;
-; 0.688 ; SYNC:C1|ADDR[3] ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 0.000        ; 0.447      ; 1.357      ;
-; 0.706 ; SYNC:C1|ADDR[2] ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 0.000        ; 0.447      ; 1.375      ;
-; 0.718 ; SYNC:C1|ADDR[0] ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 0.000        ; 0.447      ; 1.387      ;
-; 0.741 ; SYNC:C1|ADDR[1] ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 0.000        ; 0.447      ; 1.410      ;
+; 0.688 ; SYNC:C1|ADDR[3] ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 0.000        ; 0.447      ; 1.357      ;
+; 0.706 ; SYNC:C1|ADDR[2] ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 0.000        ; 0.447      ; 1.375      ;
+; 0.718 ; SYNC:C1|ADDR[0] ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 0.000        ; 0.447      ; 1.387      ;
+; 0.741 ; SYNC:C1|ADDR[1] ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 0.000        ; 0.447      ; 1.410      ;
 ; 0.820 ; SYNC:C1|HPOS[9] ; SYNC:C1|HPOS[9]                                                                                        ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 0.000        ; 0.077      ; 1.083      ;
 ; 0.880 ; SYNC:C1|HPOS[9] ; SYNC:C1|HSYNC                                                                                          ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 0.000        ; 0.077      ; 1.143      ;
 ; 0.905 ; SYNC:C1|VPOS[9] ; SYNC:C1|VSYNC                                                                                          ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 0.000        ; 0.079      ; 1.170      ;
@@ -448,30 +448,30 @@ No paths to report.
 +--------+--------------------------------------------------------------------------------------------------------+--------------+-----------------------------+-----------------------------+--------------+------------+------------+
 ; Slack  ; From Node                                                                                              ; To Node      ; Launch Clock                ; Latch Clock                 ; Relationship ; Clock Skew ; Data Delay ;
 +--------+--------------------------------------------------------------------------------------------------------+--------------+-----------------------------+-----------------------------+--------------+------------+------------+
-; 31.539 ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|R[5] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.344     ; 7.845      ;
-; 31.540 ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|B[7] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.344     ; 7.844      ;
-; 31.541 ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|B[3] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.344     ; 7.843      ;
-; 31.541 ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|B[4] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.344     ; 7.843      ;
-; 31.542 ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|B[5] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.344     ; 7.842      ;
-; 31.543 ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|R[2] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.344     ; 7.841      ;
-; 31.546 ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|R[1] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.344     ; 7.838      ;
-; 31.546 ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|B[1] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.344     ; 7.838      ;
-; 31.547 ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|R[3] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.344     ; 7.837      ;
-; 31.548 ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|R[0] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.344     ; 7.836      ;
-; 31.548 ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|B[0] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.344     ; 7.836      ;
-; 31.658 ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|G[2] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.342     ; 7.728      ;
-; 31.658 ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|G[5] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.342     ; 7.728      ;
-; 31.659 ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|G[3] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.342     ; 7.727      ;
-; 31.660 ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|G[1] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.342     ; 7.726      ;
-; 31.661 ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|G[0] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.342     ; 7.725      ;
-; 31.661 ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|G[7] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.342     ; 7.725      ;
-; 31.662 ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|B[6] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.342     ; 7.724      ;
-; 31.663 ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|G[6] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.342     ; 7.723      ;
-; 31.664 ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|R[4] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.342     ; 7.722      ;
-; 31.664 ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|B[2] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.342     ; 7.722      ;
-; 31.665 ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|R[6] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.342     ; 7.721      ;
-; 31.665 ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|R[7] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.342     ; 7.721      ;
-; 31.665 ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|G[4] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.342     ; 7.721      ;
+; 31.539 ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|R[5] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.344     ; 7.845      ;
+; 31.540 ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|B[7] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.344     ; 7.844      ;
+; 31.541 ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|B[3] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.344     ; 7.843      ;
+; 31.541 ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|B[4] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.344     ; 7.843      ;
+; 31.542 ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|B[5] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.344     ; 7.842      ;
+; 31.543 ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|R[2] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.344     ; 7.841      ;
+; 31.546 ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|R[1] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.344     ; 7.838      ;
+; 31.546 ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|B[1] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.344     ; 7.838      ;
+; 31.547 ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|R[3] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.344     ; 7.837      ;
+; 31.548 ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|R[0] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.344     ; 7.836      ;
+; 31.548 ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|B[0] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.344     ; 7.836      ;
+; 31.658 ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|G[2] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.342     ; 7.728      ;
+; 31.658 ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|G[5] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.342     ; 7.728      ;
+; 31.659 ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|G[3] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.342     ; 7.727      ;
+; 31.660 ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|G[1] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.342     ; 7.726      ;
+; 31.661 ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|G[0] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.342     ; 7.725      ;
+; 31.661 ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|G[7] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.342     ; 7.725      ;
+; 31.662 ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|B[6] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.342     ; 7.724      ;
+; 31.663 ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|G[6] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.342     ; 7.723      ;
+; 31.664 ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|R[4] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.342     ; 7.722      ;
+; 31.664 ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|B[2] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.342     ; 7.722      ;
+; 31.665 ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|R[6] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.342     ; 7.721      ;
+; 31.665 ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|R[7] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.342     ; 7.721      ;
+; 31.665 ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|G[4] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.342     ; 7.721      ;
 ; 32.862 ; SYNC:C1|VPOS[1]                                                                                        ; SYNC:C1|R[5] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.010     ; 6.856      ;
 ; 32.863 ; SYNC:C1|VPOS[1]                                                                                        ; SYNC:C1|B[7] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.010     ; 6.855      ;
 ; 32.864 ; SYNC:C1|VPOS[1]                                                                                        ; SYNC:C1|B[3] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.010     ; 6.854      ;
@@ -584,10 +584,10 @@ No paths to report.
 ; 0.618 ; SYNC:C1|ADDR[0] ; SYNC:C1|ADDR[2]                                                                                        ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 0.000        ; 0.069      ; 0.858      ;
 ; 0.620 ; SYNC:C1|VPOS[5] ; SYNC:C1|VPOS[5]                                                                                        ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 0.000        ; 0.069      ; 0.860      ;
 ; 0.622 ; SYNC:C1|VPOS[0] ; SYNC:C1|VPOS[0]                                                                                        ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 0.000        ; 0.069      ; 0.862      ;
-; 0.660 ; SYNC:C1|ADDR[3] ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 0.000        ; 0.401      ; 1.262      ;
-; 0.674 ; SYNC:C1|ADDR[2] ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 0.000        ; 0.401      ; 1.276      ;
-; 0.677 ; SYNC:C1|ADDR[0] ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 0.000        ; 0.401      ; 1.279      ;
-; 0.697 ; SYNC:C1|ADDR[1] ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 0.000        ; 0.401      ; 1.299      ;
+; 0.660 ; SYNC:C1|ADDR[3] ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 0.000        ; 0.401      ; 1.262      ;
+; 0.674 ; SYNC:C1|ADDR[2] ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 0.000        ; 0.401      ; 1.276      ;
+; 0.677 ; SYNC:C1|ADDR[0] ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 0.000        ; 0.401      ; 1.279      ;
+; 0.697 ; SYNC:C1|ADDR[1] ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 0.000        ; 0.401      ; 1.299      ;
 ; 0.760 ; SYNC:C1|HPOS[9] ; SYNC:C1|HPOS[9]                                                                                        ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 0.000        ; 0.069      ; 1.000      ;
 ; 0.814 ; SYNC:C1|HPOS[9] ; SYNC:C1|HSYNC                                                                                          ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 0.000        ; 0.069      ; 1.054      ;
 ; 0.838 ; SYNC:C1|VPOS[9] ; SYNC:C1|VSYNC                                                                                          ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 0.000        ; 0.071      ; 1.080      ;
@@ -710,30 +710,30 @@ No paths to report.
 +--------+--------------------------------------------------------------------------------------------------------+--------------+-----------------------------+-----------------------------+--------------+------------+------------+
 ; Slack  ; From Node                                                                                              ; To Node      ; Launch Clock                ; Latch Clock                 ; Relationship ; Clock Skew ; Data Delay ;
 +--------+--------------------------------------------------------------------------------------------------------+--------------+-----------------------------+-----------------------------+--------------+------------+------------+
-; 35.464 ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|R[5] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.182     ; 4.070      ;
-; 35.465 ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|B[7] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.182     ; 4.069      ;
-; 35.466 ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|B[3] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.182     ; 4.068      ;
-; 35.467 ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|B[4] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.182     ; 4.067      ;
-; 35.468 ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|R[2] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.182     ; 4.066      ;
-; 35.468 ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|B[5] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.182     ; 4.066      ;
-; 35.472 ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|R[1] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.182     ; 4.062      ;
-; 35.473 ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|R[3] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.182     ; 4.061      ;
-; 35.473 ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|B[1] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.182     ; 4.061      ;
-; 35.474 ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|R[0] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.182     ; 4.060      ;
-; 35.475 ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|B[0] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.182     ; 4.059      ;
-; 35.507 ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|G[5] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.180     ; 4.029      ;
-; 35.508 ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|G[2] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.180     ; 4.028      ;
-; 35.508 ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|G[3] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.180     ; 4.028      ;
-; 35.510 ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|G[1] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.180     ; 4.026      ;
-; 35.511 ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|G[0] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.180     ; 4.025      ;
-; 35.511 ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|G[7] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.180     ; 4.025      ;
-; 35.513 ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|G[6] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.180     ; 4.023      ;
-; 35.513 ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|B[6] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.180     ; 4.023      ;
-; 35.514 ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|B[2] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.180     ; 4.022      ;
-; 35.515 ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|R[4] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.180     ; 4.021      ;
-; 35.515 ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|R[6] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.180     ; 4.021      ;
-; 35.516 ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|R[7] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.180     ; 4.020      ;
-; 35.516 ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|G[4] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.180     ; 4.020      ;
+; 35.464 ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|R[5] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.182     ; 4.070      ;
+; 35.465 ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|B[7] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.182     ; 4.069      ;
+; 35.466 ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|B[3] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.182     ; 4.068      ;
+; 35.467 ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|B[4] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.182     ; 4.067      ;
+; 35.468 ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|R[2] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.182     ; 4.066      ;
+; 35.468 ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|B[5] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.182     ; 4.066      ;
+; 35.472 ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|R[1] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.182     ; 4.062      ;
+; 35.473 ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|R[3] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.182     ; 4.061      ;
+; 35.473 ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|B[1] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.182     ; 4.061      ;
+; 35.474 ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|R[0] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.182     ; 4.060      ;
+; 35.475 ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|B[0] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.182     ; 4.059      ;
+; 35.507 ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|G[5] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.180     ; 4.029      ;
+; 35.508 ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|G[2] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.180     ; 4.028      ;
+; 35.508 ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|G[3] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.180     ; 4.028      ;
+; 35.510 ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|G[1] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.180     ; 4.026      ;
+; 35.511 ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|G[0] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.180     ; 4.025      ;
+; 35.511 ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|G[7] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.180     ; 4.025      ;
+; 35.513 ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|G[6] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.180     ; 4.023      ;
+; 35.513 ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|B[6] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.180     ; 4.023      ;
+; 35.514 ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|B[2] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.180     ; 4.022      ;
+; 35.515 ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|R[4] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.180     ; 4.021      ;
+; 35.515 ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|R[6] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.180     ; 4.021      ;
+; 35.516 ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|R[7] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.180     ; 4.020      ;
+; 35.516 ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; SYNC:C1|G[4] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; -0.180     ; 4.020      ;
 ; 35.912 ; SYNC:C1|VPOS[1]                                                                                        ; SYNC:C1|R[5] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; 0.017      ; 3.821      ;
 ; 35.913 ; SYNC:C1|VPOS[1]                                                                                        ; SYNC:C1|B[7] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; 0.017      ; 3.820      ;
 ; 35.914 ; SYNC:C1|VPOS[1]                                                                                        ; SYNC:C1|B[3] ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 39.729       ; 0.017      ; 3.819      ;
@@ -837,19 +837,19 @@ No paths to report.
 ; 0.303 ; SYNC:C1|VPOS[4] ; SYNC:C1|VPOS[4]                                                                                        ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 0.000        ; 0.038      ; 0.425      ;
 ; 0.303 ; SYNC:C1|VPOS[6] ; SYNC:C1|VPOS[6]                                                                                        ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 0.000        ; 0.038      ; 0.425      ;
 ; 0.304 ; SYNC:C1|VPOS[1] ; SYNC:C1|VPOS[1]                                                                                        ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 0.000        ; 0.038      ; 0.426      ;
-; 0.306 ; SYNC:C1|ADDR[3] ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 0.000        ; 0.235      ; 0.645      ;
+; 0.306 ; SYNC:C1|ADDR[3] ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 0.000        ; 0.235      ; 0.645      ;
 ; 0.307 ; SYNC:C1|HPOS[0] ; SYNC:C1|HPOS[0]                                                                                        ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 0.000        ; 0.038      ; 0.429      ;
 ; 0.307 ; SYNC:C1|HPOS[4] ; SYNC:C1|HPOS[4]                                                                                        ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 0.000        ; 0.038      ; 0.429      ;
 ; 0.307 ; SYNC:C1|HPOS[6] ; SYNC:C1|HPOS[6]                                                                                        ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 0.000        ; 0.038      ; 0.429      ;
 ; 0.308 ; SYNC:C1|HPOS[8] ; SYNC:C1|HPOS[8]                                                                                        ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 0.000        ; 0.038      ; 0.430      ;
 ; 0.308 ; SYNC:C1|HPOS[5] ; SYNC:C1|HPOS[5]                                                                                        ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 0.000        ; 0.038      ; 0.430      ;
 ; 0.309 ; SYNC:C1|VPOS[7] ; SYNC:C1|VPOS[7]                                                                                        ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 0.000        ; 0.038      ; 0.431      ;
-; 0.311 ; SYNC:C1|ADDR[2] ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 0.000        ; 0.235      ; 0.650      ;
-; 0.312 ; SYNC:C1|ADDR[0] ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 0.000        ; 0.235      ; 0.651      ;
+; 0.311 ; SYNC:C1|ADDR[2] ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 0.000        ; 0.235      ; 0.650      ;
+; 0.312 ; SYNC:C1|ADDR[0] ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 0.000        ; 0.235      ; 0.651      ;
 ; 0.313 ; SYNC:C1|VPOS[5] ; SYNC:C1|VPOS[5]                                                                                        ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 0.000        ; 0.038      ; 0.435      ;
 ; 0.313 ; SYNC:C1|VPOS[0] ; SYNC:C1|VPOS[0]                                                                                        ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 0.000        ; 0.038      ; 0.435      ;
 ; 0.313 ; SYNC:C1|ADDR[0] ; SYNC:C1|ADDR[2]                                                                                        ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 0.000        ; 0.038      ; 0.435      ;
-; 0.323 ; SYNC:C1|ADDR[1] ; SYNC:C1|fontROM:C3|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 0.000        ; 0.235      ; 0.662      ;
+; 0.323 ; SYNC:C1|ADDR[1] ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ram_block1a0~porta_address_reg0 ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 0.000        ; 0.235      ; 0.662      ;
 ; 0.368 ; SYNC:C1|HPOS[9] ; SYNC:C1|HPOS[9]                                                                                        ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 0.000        ; 0.038      ; 0.490      ;
 ; 0.401 ; SYNC:C1|HPOS[9] ; SYNC:C1|HSYNC                                                                                          ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 0.000        ; 0.038      ; 0.523      ;
 ; 0.403 ; SYNC:C1|VPOS[9] ; SYNC:C1|VSYNC                                                                                          ; C2|altpll_0|sd1|pll7|clk[0] ; C2|altpll_0|sd1|pll7|clk[0] ; 0.000        ; 0.040      ; 0.527      ;
@@ -983,8 +983,8 @@ No synchronizer chains to report.
 +-------------------------+--------------+-----------------+-----------------+
 ; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
 +-------------------------+--------------+-----------------+-----------------+
-; KEYB_CLOCK              ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; KEYDATA                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; PS2_CLK                 ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; PS2_DATA                ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; CLOCK_50                ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; ~ALTERA_ASDO_DATA1~     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; ~ALTERA_FLASH_nCE_nCSO~ ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
@@ -1235,11 +1235,11 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime TimeQuest Timing Analyzer
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Thu Oct 04 15:31:16 2018
+    Info: Processing started: Thu Oct 04 19:09:42 2018
 Info: Command: quartus_sta vga -c vga
 Info: qsta_default_script.tcl version: #3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'vga.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
@@ -1307,9 +1307,9 @@ Info (332146): Worst-case minimum pulse width slack is 9.574
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4864 megabytes
-    Info: Processing ended: Thu Oct 04 15:31:19 2018
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Peak virtual memory: 4839 megabytes
+    Info: Processing ended: Thu Oct 04 19:09:49 2018
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:04
 
 

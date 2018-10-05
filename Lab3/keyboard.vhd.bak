@@ -2,7 +2,7 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-entity keyboard_reader is
+entity keyboard is
 port(
 	clk_keyboard: in std_logic; -- Pin used to emulate the clk_keyboard cycles
 	data: 			in std_logic;	 -- Pin used for data input
@@ -10,11 +10,11 @@ port(
 	-- rom:				out std_logic_vector(7 DOWNTO 0);
 );
 
-end keyboard_reader;
+end keyboard;
 
 -----------------------------------------------------
 
-architecture FSM of keyboard_reader is
+architecture FSM of keyboard is
 	 signal counter: integer := 0;
 	 signal data_vector: unsigned(10 DOWNTO 0); -- Is the data
 begin    

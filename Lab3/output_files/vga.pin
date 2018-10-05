@@ -80,7 +80,7 @@ VGA_B[1]                     : A10       : output : 2.5 V             :         
 VGA_B[4]                     : A11       : output : 2.5 V             :         : 8         : Y              
 VGA_CLOCK                    : A12       : output : 2.5 V             :         : 8         : Y              
 VCCIO8                       : A13       : power  :                   : 2.5V    : 8         :                
-KEYB_CLOCK                   : A14       : input  : 2.5 V             :         : 8         : N              
+PS2_CLK                      : A14       : input  : 2.5 V             :         : 8         : N              
 GND+                         : A15       :        :                   :         : 7         :                
 VCCIO7                       : A16       : power  :                   : 2.5V    : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : A17       :        :                   :         : 7         :                
@@ -329,7 +329,7 @@ VGA_B[0]                     : B10       : output : 2.5 V             :         
 VGA_B[3]                     : B11       : output : 2.5 V             :         : 8         : Y              
 GND                          : B12       : gnd    :                   :         :           :                
 GND                          : B13       : gnd    :                   :         :           :                
-KEYDATA                      : B14       : input  : 2.5 V             :         : 8         : N              
+PS2_DATA                     : B14       : input  : 2.5 V             :         : 8         : N              
 GND+                         : B15       :        :                   :         : 7         :                
 GND                          : B16       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : B17       :        :                   :         : 7         :                
