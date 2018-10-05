@@ -94,4 +94,20 @@ set_global_assignment -name VHDL_FILE commonPak.vhd
 set_global_assignment -name QSYS_FILE PLL.qsys
 set_global_assignment -name VHDL_FILE vga.vhd
 set_global_assignment -name VHDL_FILE SYNC.vhd
+set_location_assignment PIN_G6 -to PS2_CLK
+set_location_assignment PIN_H5 -to PS2_DATA
+set_location_assignment PIN_AA17 -to d_left[0]
+set_location_assignment PIN_AB16 -to d_left[1]
+set_location_assignment PIN_AA16 -to d_left[2]
+set_location_assignment PIN_AB17 -to d_left[3]
+set_location_assignment PIN_AB15 -to d_left[4]
+set_location_assignment PIN_AA15 -to d_left[5]
+set_location_assignment PIN_AC17 -to d_left[6]
+set_location_assignment PIN_AD17 -to d_right[0]
+set_location_assignment PIN_AE17 -to d_right[1]
+set_location_assignment PIN_AG17 -to d_right[2]
+set_location_assignment PIN_AH17 -to d_right[3]
+set_location_assignment PIN_AF17 -to d_right[4]
+set_location_assignment PIN_AG18 -to d_right[5]
+set_location_assignment PIN_AA14 -to d_right[6]
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

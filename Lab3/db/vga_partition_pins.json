@@ -106,6 +106,70 @@
 				{
 					"name" : "VGA_B[7]",
 					"strict" : false
+				},
+				{
+					"name" : "d_right[6]",
+					"strict" : false
+				},
+				{
+					"name" : "d_right[5]",
+					"strict" : false
+				},
+				{
+					"name" : "d_right[4]",
+					"strict" : false
+				},
+				{
+					"name" : "d_right[3]",
+					"strict" : false
+				},
+				{
+					"name" : "d_right[2]",
+					"strict" : false
+				},
+				{
+					"name" : "d_right[1]",
+					"strict" : false
+				},
+				{
+					"name" : "d_right[0]",
+					"strict" : false
+				},
+				{
+					"name" : "d_left[6]",
+					"strict" : false
+				},
+				{
+					"name" : "d_left[5]",
+					"strict" : false
+				},
+				{
+					"name" : "d_left[4]",
+					"strict" : false
+				},
+				{
+					"name" : "d_left[3]",
+					"strict" : false
+				},
+				{
+					"name" : "d_left[2]",
+					"strict" : false
+				},
+				{
+					"name" : "d_left[1]",
+					"strict" : false
+				},
+				{
+					"name" : "d_left[0]",
+					"strict" : false
+				},
+				{
+					"name" : "PS2_CLK",
+					"strict" : false
+				},
+				{
+					"name" : "PS2_DATA",
+					"strict" : false
 				}
 			]
 		}

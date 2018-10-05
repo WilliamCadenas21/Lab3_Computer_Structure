@@ -1,5 +1,5 @@
 Analysis & Synthesis report for vga
-Thu Oct 04 19:08:48 2018
+Fri Oct 05 17:51:45 2018
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -23,15 +23,15 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
  15. Source assignments for PLL:C2|PLL_altpll_0:altpll_0
  16. Source assignments for PLL:C2|PLL_altpll_0:altpll_0|PLL_altpll_0_stdsync_sv6:stdsync2|PLL_altpll_0_dffpipe_l2c:dffpipe3
  17. Source assignments for SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated
- 18. Parameter Settings for User Entity Instance: SYNC:C1|fontROM:C1
- 19. Parameter Settings for Inferred Entity Instance: SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0
- 20. altsyncram Parameter Settings by Entity Instance
- 21. Port Connectivity Checks: "keyboard:C3"
- 22. Port Connectivity Checks: "PLL:C2|PLL_altpll_0:altpll_0|PLL_altpll_0_altpll_tc42:sd1"
- 23. Port Connectivity Checks: "PLL:C2|PLL_altpll_0:altpll_0"
- 24. Port Connectivity Checks: "PLL:C2"
- 25. Port Connectivity Checks: "SYNC:C1|fontROM:C1"
- 26. Port Connectivity Checks: "SYNC:C1"
+ 18. Source assignments for keyboard:C3|altsyncram:Mux20_rtl_0|altsyncram_iou:auto_generated
+ 19. Parameter Settings for User Entity Instance: SYNC:C1|fontROM:C1
+ 20. Parameter Settings for Inferred Entity Instance: SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0
+ 21. Parameter Settings for Inferred Entity Instance: keyboard:C3|altsyncram:Mux20_rtl_0
+ 22. altsyncram Parameter Settings by Entity Instance
+ 23. Port Connectivity Checks: "PLL:C2|PLL_altpll_0:altpll_0|PLL_altpll_0_altpll_tc42:sd1"
+ 24. Port Connectivity Checks: "PLL:C2|PLL_altpll_0:altpll_0"
+ 25. Port Connectivity Checks: "PLL:C2"
+ 26. Port Connectivity Checks: "SYNC:C1|fontROM:C1"
  27. Post-Synthesis Netlist Statistics for Top Partition
  28. Elapsed Time Per Partition
  29. Analysis & Synthesis Messages
@@ -60,18 +60,18 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Oct 04 19:08:48 2018       ;
+; Analysis & Synthesis Status        ; Successful - Fri Oct 05 17:51:45 2018       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; vga                                         ;
 ; Top-level Entity Name              ; VGA                                         ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 148                                         ;
-;     Total combinational functions  ; 125                                         ;
-;     Dedicated logic registers      ; 82                                          ;
-; Total registers                    ; 82                                          ;
-; Total pins                         ; 30                                          ;
+; Total logic elements               ; 228                                         ;
+;     Total combinational functions  ; 197                                         ;
+;     Dedicated logic registers      ; 144                                         ;
+; Total registers                    ; 144                                         ;
+; Total pins                         ; 44                                          ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 128                                         ;
+; Total memory bits                  ; 18,176                                      ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
 ; Total PLLs                         ; 1                                           ;
 +------------------------------------+---------------------------------------------+
@@ -180,30 +180,31 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                               ;
-+----------------------------------------------------------------------------------------+-----------------+-------------------------------------------------------+-----------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path                                                       ; Used in Netlist ; File Type                                             ; File Name with Absolute Path                                                            ; Library ;
-+----------------------------------------------------------------------------------------+-----------------+-------------------------------------------------------+-----------------------------------------------------------------------------------------+---------+
-; VGA.vhd                                                                                ; yes             ; User VHDL File                                        ; C:/Users/WILL/Desktop/Lab3_Computer_Structure/Lab3/VGA.vhd                              ;         ;
-; fontROM.vhd                                                                            ; yes             ; User VHDL File                                        ; C:/Users/WILL/Desktop/Lab3_Computer_Structure/Lab3/fontROM.vhd                          ;         ;
-; commonPak.vhd                                                                          ; yes             ; User VHDL File                                        ; C:/Users/WILL/Desktop/Lab3_Computer_Structure/Lab3/commonPak.vhd                        ;         ;
-; SYNC.vhd                                                                               ; yes             ; User VHDL File                                        ; C:/Users/WILL/Desktop/Lab3_Computer_Structure/Lab3/SYNC.vhd                             ;         ;
-; c:/users/will/desktop/lab3_computer_structure/lab3/db/ip/pll/pll.v                     ; yes             ; Auto-Found Verilog HDL File                           ; c:/users/will/desktop/lab3_computer_structure/lab3/db/ip/pll/pll.v                      ; PLL     ;
-; c:/users/will/desktop/lab3_computer_structure/lab3/db/ip/pll/submodules/pll_altpll_0.v ; yes             ; Auto-Found Verilog HDL File                           ; c:/users/will/desktop/lab3_computer_structure/lab3/db/ip/pll/submodules/pll_altpll_0.v  ; PLL     ;
-; keyboard.vhd                                                                           ; yes             ; Auto-Found VHDL File                                  ; C:/Users/WILL/Desktop/Lab3_Computer_Structure/Lab3/keyboard.vhd                         ;         ;
-; altsyncram.tdf                                                                         ; yes             ; Megafunction                                          ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altsyncram.tdf                   ;         ;
-; stratix_ram_block.inc                                                                  ; yes             ; Megafunction                                          ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/stratix_ram_block.inc            ;         ;
-; lpm_mux.inc                                                                            ; yes             ; Megafunction                                          ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_mux.inc                      ;         ;
-; lpm_decode.inc                                                                         ; yes             ; Megafunction                                          ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_decode.inc                   ;         ;
-; aglobal171.inc                                                                         ; yes             ; Megafunction                                          ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/aglobal171.inc                   ;         ;
-; a_rdenreg.inc                                                                          ; yes             ; Megafunction                                          ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/a_rdenreg.inc                    ;         ;
-; altrom.inc                                                                             ; yes             ; Megafunction                                          ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altrom.inc                       ;         ;
-; altram.inc                                                                             ; yes             ; Megafunction                                          ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altram.inc                       ;         ;
-; altdpram.inc                                                                           ; yes             ; Megafunction                                          ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altdpram.inc                     ;         ;
-; db/altsyncram_dg61.tdf                                                                 ; yes             ; Auto-Generated Megafunction                           ; C:/Users/WILL/Desktop/Lab3_Computer_Structure/Lab3/db/altsyncram_dg61.tdf               ;         ;
-; db/vga.ram0_fontrom_16852496.hdl.mif                                                   ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; C:/Users/WILL/Desktop/Lab3_Computer_Structure/Lab3/db/vga.ram0_fontrom_16852496.hdl.mif ;         ;
-+----------------------------------------------------------------------------------------+-----------------+-------------------------------------------------------+-----------------------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                                             ;
++-----------------------------------------------------------------------------------------------+-----------------+-------------------------------------------------------+------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path                                                              ; Used in Netlist ; File Type                                             ; File Name with Absolute Path                                                                   ; Library ;
++-----------------------------------------------------------------------------------------------+-----------------+-------------------------------------------------------+------------------------------------------------------------------------------------------------+---------+
+; VGA.vhd                                                                                       ; yes             ; User VHDL File                                        ; C:/Users/laboratorio/Desktop/Lab3_Computer_Structure/Lab3/VGA.vhd                              ;         ;
+; fontROM.vhd                                                                                   ; yes             ; User VHDL File                                        ; C:/Users/laboratorio/Desktop/Lab3_Computer_Structure/Lab3/fontROM.vhd                          ;         ;
+; commonPak.vhd                                                                                 ; yes             ; User VHDL File                                        ; C:/Users/laboratorio/Desktop/Lab3_Computer_Structure/Lab3/commonPak.vhd                        ;         ;
+; SYNC.vhd                                                                                      ; yes             ; User VHDL File                                        ; C:/Users/laboratorio/Desktop/Lab3_Computer_Structure/Lab3/SYNC.vhd                             ;         ;
+; c:/users/laboratorio/desktop/lab3_computer_structure/lab3/db/ip/pll/pll.v                     ; yes             ; Auto-Found Verilog HDL File                           ; c:/users/laboratorio/desktop/lab3_computer_structure/lab3/db/ip/pll/pll.v                      ; PLL     ;
+; c:/users/laboratorio/desktop/lab3_computer_structure/lab3/db/ip/pll/submodules/pll_altpll_0.v ; yes             ; Auto-Found Verilog HDL File                           ; c:/users/laboratorio/desktop/lab3_computer_structure/lab3/db/ip/pll/submodules/pll_altpll_0.v  ; PLL     ;
+; keyboard.vhd                                                                                  ; yes             ; Auto-Found VHDL File                                  ; C:/Users/laboratorio/Desktop/Lab3_Computer_Structure/Lab3/keyboard.vhd                         ;         ;
+; altsyncram.tdf                                                                                ; yes             ; Megafunction                                          ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altsyncram.tdf                          ;         ;
+; stratix_ram_block.inc                                                                         ; yes             ; Megafunction                                          ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/stratix_ram_block.inc                   ;         ;
+; lpm_mux.inc                                                                                   ; yes             ; Megafunction                                          ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_mux.inc                             ;         ;
+; lpm_decode.inc                                                                                ; yes             ; Megafunction                                          ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_decode.inc                          ;         ;
+; aglobal171.inc                                                                                ; yes             ; Megafunction                                          ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/aglobal171.inc                          ;         ;
+; a_rdenreg.inc                                                                                 ; yes             ; Megafunction                                          ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/a_rdenreg.inc                           ;         ;
+; altrom.inc                                                                                    ; yes             ; Megafunction                                          ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altrom.inc                              ;         ;
+; altram.inc                                                                                    ; yes             ; Megafunction                                          ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altram.inc                              ;         ;
+; altdpram.inc                                                                                  ; yes             ; Megafunction                                          ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altdpram.inc                            ;         ;
+; db/altsyncram_dg61.tdf                                                                        ; yes             ; Auto-Generated Megafunction                           ; C:/Users/laboratorio/Desktop/Lab3_Computer_Structure/Lab3/db/altsyncram_dg61.tdf               ;         ;
+; db/vga.ram0_fontrom_16852496.hdl.mif                                                          ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; C:/Users/laboratorio/Desktop/Lab3_Computer_Structure/Lab3/db/vga.ram0_fontrom_16852496.hdl.mif ;         ;
+; db/altsyncram_iou.tdf                                                                         ; yes             ; Auto-Generated Megafunction                           ; C:/Users/laboratorio/Desktop/Lab3_Computer_Structure/Lab3/db/altsyncram_iou.tdf                ;         ;
++-----------------------------------------------------------------------------------------------+-----------------+-------------------------------------------------------+------------------------------------------------------------------------------------------------+---------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -211,24 +212,24 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+----------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                      ;
 +---------------------------------------------+----------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 148                                                                        ;
+; Estimated Total logic elements              ; 228                                                                        ;
 ;                                             ;                                                                            ;
-; Total combinational functions               ; 125                                                                        ;
+; Total combinational functions               ; 197                                                                        ;
 ; Logic element usage by number of LUT inputs ;                                                                            ;
-;     -- 4 input functions                    ; 31                                                                         ;
-;     -- 3 input functions                    ; 8                                                                          ;
-;     -- <=2 input functions                  ; 86                                                                         ;
+;     -- 4 input functions                    ; 63                                                                         ;
+;     -- 3 input functions                    ; 16                                                                         ;
+;     -- <=2 input functions                  ; 118                                                                        ;
 ;                                             ;                                                                            ;
 ; Logic elements by mode                      ;                                                                            ;
-;     -- normal mode                          ; 76                                                                         ;
-;     -- arithmetic mode                      ; 49                                                                         ;
+;     -- normal mode                          ; 117                                                                        ;
+;     -- arithmetic mode                      ; 80                                                                         ;
 ;                                             ;                                                                            ;
-; Total registers                             ; 82                                                                         ;
-;     -- Dedicated logic registers            ; 82                                                                         ;
+; Total registers                             ; 144                                                                        ;
+;     -- Dedicated logic registers            ; 144                                                                        ;
 ;     -- I/O registers                        ; 0                                                                          ;
 ;                                             ;                                                                            ;
-; I/O pins                                    ; 30                                                                         ;
-; Total memory bits                           ; 128                                                                        ;
+; I/O pins                                    ; 44                                                                         ;
+; Total memory bits                           ; 18176                                                                      ;
 ;                                             ;                                                                            ;
 ; Embedded Multiplier 9-bit elements          ; 0                                                                          ;
 ;                                             ;                                                                            ;
@@ -236,9 +237,9 @@ refer to the applicable agreement for further details.
 ;     -- PLLs                                 ; 1                                                                          ;
 ;                                             ;                                                                            ;
 ; Maximum fan-out node                        ; PLL:C2|PLL_altpll_0:altpll_0|PLL_altpll_0_altpll_tc42:sd1|wire_pll7_clk[0] ;
-; Maximum fan-out                             ; 92                                                                         ;
-; Total fan-out                               ; 646                                                                        ;
-; Average fan-out                             ; 2.34                                                                       ;
+; Maximum fan-out                             ; 99                                                                         ;
+; Total fan-out                               ; 1186                                                                       ;
+; Average fan-out                             ; 2.67                                                                       ;
 +---------------------------------------------+----------------------------------------------------------------------------+
 
 
@@ -247,14 +248,17 @@ refer to the applicable agreement for further details.
 +----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------+--------------------------+--------------+
 ; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                         ; Entity Name              ; Library Name ;
 +----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------+--------------------------+--------------+
-; |VGA                                         ; 125 (0)             ; 82 (0)                    ; 128         ; 0            ; 0       ; 0         ; 30   ; 0            ; |VGA                                                                        ; VGA                      ; work         ;
+; |VGA                                         ; 197 (0)             ; 144 (0)                   ; 18176       ; 0            ; 0       ; 0         ; 44   ; 0            ; |VGA                                                                        ; VGA                      ; work         ;
 ;    |PLL:C2|                                  ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|PLL:C2                                                                 ; PLL                      ; PLL          ;
 ;       |PLL_altpll_0:altpll_0|                ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|PLL:C2|PLL_altpll_0:altpll_0                                           ; PLL_altpll_0             ; PLL          ;
 ;          |PLL_altpll_0_altpll_tc42:sd1|      ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|PLL:C2|PLL_altpll_0:altpll_0|PLL_altpll_0_altpll_tc42:sd1              ; PLL_altpll_0_altpll_tc42 ; PLL          ;
-;    |SYNC:C1|                                 ; 125 (125)           ; 82 (82)                   ; 128         ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1                                                                ; SYNC                     ; work         ;
-;       |fontROM:C1|                           ; 0 (0)               ; 0 (0)                     ; 128         ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|fontROM:C1                                                     ; fontROM                  ; work         ;
-;          |altsyncram:ROM_rtl_0|              ; 0 (0)               ; 0 (0)                     ; 128         ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0                                ; altsyncram               ; work         ;
-;             |altsyncram_dg61:auto_generated| ; 0 (0)               ; 0 (0)                     ; 128         ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated ; altsyncram_dg61          ; work         ;
+;    |SYNC:C1|                                 ; 125 (125)           ; 82 (82)                   ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1                                                                ; SYNC                     ; work         ;
+;       |fontROM:C1|                           ; 0 (0)               ; 0 (0)                     ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|fontROM:C1                                                     ; fontROM                  ; work         ;
+;          |altsyncram:ROM_rtl_0|              ; 0 (0)               ; 0 (0)                     ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0                                ; altsyncram               ; work         ;
+;             |altsyncram_dg61:auto_generated| ; 0 (0)               ; 0 (0)                     ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated ; altsyncram_dg61          ; work         ;
+;    |keyboard:C3|                             ; 72 (72)             ; 62 (62)                   ; 1792        ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|keyboard:C3                                                            ; keyboard                 ; work         ;
+;       |altsyncram:Mux20_rtl_0|               ; 0 (0)               ; 0 (0)                     ; 1792        ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|keyboard:C3|altsyncram:Mux20_rtl_0                                     ; altsyncram               ; work         ;
+;          |altsyncram_iou:auto_generated|     ; 0 (0)               ; 0 (0)                     ; 1792        ; 0            ; 0       ; 0         ; 0    ; 0            ; |VGA|keyboard:C3|altsyncram:Mux20_rtl_0|altsyncram_iou:auto_generated       ; altsyncram_iou           ; work         ;
 +----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------+--------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -265,17 +269,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Name                                                                              ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF                                  ;
 +-----------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+-------+--------------------------------------+
 ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 2048         ; 8            ; --           ; --           ; 16384 ; db/vga.ram0_fontROM_16852496.hdl.mif ;
+; keyboard:C3|altsyncram:Mux20_rtl_0|altsyncram_iou:auto_generated|ALTSYNCRAM       ; AUTO ; ROM  ; 256          ; 7            ; --           ; --           ; 1792  ; vga.VGA0.rtl.mif                     ;
 +-----------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+-------+--------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis IP Cores Summary                                                                                                                           ;
-+--------+--------------+---------+--------------+--------------+-----------------------------------+-------------------------------------------------------------+
-; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                   ; IP Include File                                             ;
-+--------+--------------+---------+--------------+--------------+-----------------------------------+-------------------------------------------------------------+
-; N/A    ; Qsys         ; 17.1    ; N/A          ; N/A          ; |VGA|PLL:C2                       ; C:/Users/WILL/Desktop/Lab3_Computer_Structure/Lab3/PLL.qsys ;
-; Altera ; altpll       ; 17.1    ; N/A          ; N/A          ; |VGA|PLL:C2|PLL_altpll_0:altpll_0 ; C:/Users/WILL/Desktop/Lab3_Computer_Structure/Lab3/PLL.qsys ;
-+--------+--------------+---------+--------------+--------------+-----------------------------------+-------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                                                  ;
++--------+--------------+---------+--------------+--------------+-----------------------------------+--------------------------------------------------------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                   ; IP Include File                                                    ;
++--------+--------------+---------+--------------+--------------+-----------------------------------+--------------------------------------------------------------------+
+; N/A    ; Qsys         ; 17.1    ; N/A          ; N/A          ; |VGA|PLL:C2                       ; C:/Users/laboratorio/Desktop/Lab3_Computer_Structure/Lab3/PLL.qsys ;
+; Altera ; altpll       ; 17.1    ; N/A          ; N/A          ; |VGA|PLL:C2|PLL_altpll_0:altpll_0 ; C:/Users/laboratorio/Desktop/Lab3_Computer_Structure/Lab3/PLL.qsys ;
++--------+--------------+---------+--------------+--------------+-----------------------------------+--------------------------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------+
@@ -293,12 +298,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 82    ;
-; Number of registers using Synchronous Clear  ; 20    ;
+; Total registers                              ; 144   ;
+; Number of registers using Synchronous Clear  ; 52    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 46    ;
+; Number of registers using Clock Enable       ; 68    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -321,6 +326,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Register Name                     ; Megafunction                 ; Type ;
 +-----------------------------------+------------------------------+------+
 ; SYNC:C1|fontROM:C1|dataOutA[0..7] ; SYNC:C1|fontROM:C1|ROM_rtl_0 ; RAM  ;
+; SYNC:C1|ADDR[4..10]               ; keyboard:C3|Mux20_rtl_0      ; ROM  ;
 +-----------------------------------+------------------------------+------+
 
 
@@ -329,9 +335,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |VGA|SYNC:C1|ADDR[2]       ;
-; 4:1                ; 29 bits   ; 58 LEs        ; 29 LEs               ; 29 LEs                 ; Yes        ; |VGA|SYNC:C1|INDEX[3]      ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |VGA|SYNC:C1|INDEX[0]      ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |VGA|SYNC:C1|ADDR[0]       ;
+; 4:1                ; 29 bits   ; 58 LEs        ; 29 LEs               ; 29 LEs                 ; Yes        ; |VGA|SYNC:C1|INDEX[6]      ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |VGA|SYNC:C1|INDEX[1]      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
@@ -360,6 +366,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------+--------------------+------+---------------------------------+
 ; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                               ;
 +---------------------------------+--------------------+------+---------------------------------+
+
+
++-----------------------------------------------------------------------------------------+
+; Source assignments for keyboard:C3|altsyncram:Mux20_rtl_0|altsyncram_iou:auto_generated ;
++---------------------------------+--------------------+------+---------------------------+
+; Assignment                      ; Value              ; From ; To                        ;
++---------------------------------+--------------------+------+---------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                         ;
++---------------------------------+--------------------+------+---------------------------+
 
 
 +-----------------------------------------------------------------+
@@ -435,11 +450,72 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +-------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: keyboard:C3|altsyncram:Mux20_rtl_0 ;
++------------------------------------+----------------------+-------------------------+
+; Parameter Name                     ; Value                ; Type                    ;
++------------------------------------+----------------------+-------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                 ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY              ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY            ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE            ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE          ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                 ;
+; OPERATION_MODE                     ; ROM                  ; Untyped                 ;
+; WIDTH_A                            ; 7                    ; Untyped                 ;
+; WIDTHAD_A                          ; 8                    ; Untyped                 ;
+; NUMWORDS_A                         ; 256                  ; Untyped                 ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                 ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                 ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                 ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                 ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                 ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                 ;
+; WIDTH_B                            ; 1                    ; Untyped                 ;
+; WIDTHAD_B                          ; 1                    ; Untyped                 ;
+; NUMWORDS_B                         ; 1                    ; Untyped                 ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                 ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                 ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                 ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                 ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                 ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                 ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                 ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                 ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                 ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                 ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                 ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                 ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Untyped                 ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                 ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                 ;
+; BYTE_SIZE                          ; 8                    ; Untyped                 ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                 ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                 ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                 ;
+; INIT_FILE                          ; vga.VGA0.rtl.mif     ; Untyped                 ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                 ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                 ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL               ; Untyped                 ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                 ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL               ; Untyped                 ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                 ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                 ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                 ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                 ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                 ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                 ;
+; DEVICE_FAMILY                      ; Cyclone IV E         ; Untyped                 ;
+; CBXI_PARAMETER                     ; altsyncram_iou       ; Untyped                 ;
++------------------------------------+----------------------+-------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
 ; altsyncram Parameter Settings by Entity Instance                                    ;
 +-------------------------------------------+-----------------------------------------+
 ; Name                                      ; Value                                   ;
 +-------------------------------------------+-----------------------------------------+
-; Number of entity instances                ; 1                                       ;
+; Number of entity instances                ; 2                                       ;
 ; Entity Instance                           ; SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0 ;
 ;     -- OPERATION_MODE                     ; ROM                                     ;
 ;     -- WIDTH_A                            ; 8                                       ;
@@ -451,16 +527,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     -- OUTDATA_REG_B                      ; UNREGISTERED                            ;
 ;     -- RAM_BLOCK_TYPE                     ; AUTO                                    ;
 ;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                               ;
+; Entity Instance                           ; keyboard:C3|altsyncram:Mux20_rtl_0      ;
+;     -- OPERATION_MODE                     ; ROM                                     ;
+;     -- WIDTH_A                            ; 7                                       ;
+;     -- NUMWORDS_A                         ; 256                                     ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                            ;
+;     -- WIDTH_B                            ; 1                                       ;
+;     -- NUMWORDS_B                         ; 1                                       ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                  ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                            ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                    ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                               ;
 +-------------------------------------------+-----------------------------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "keyboard:C3"                                                                                                                                ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                                                                      ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; clk  ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------+
@@ -513,20 +591,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Port         ; Type  ; Severity ; Details      ;
 +--------------+-------+----------+--------------+
 ; writeenablea ; Input ; Info     ; Stuck at GND ;
-; addra[5..4]  ; Input ; Info     ; Stuck at VCC ;
-; addra[9..6]  ; Input ; Info     ; Stuck at GND ;
-; addra[10]    ; Input ; Info     ; Stuck at VCC ;
 ; dataina      ; Input ; Info     ; Stuck at GND ;
 +--------------+-------+----------+--------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "SYNC:C1"                                                                                                                                      ;
-+--------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port   ; Type  ; Severity ; Details                                                                                                                                      ;
-+--------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; clk_50 ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+--------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -534,25 +600,25 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 30                          ;
-; cycloneiii_ff         ; 82                          ;
-;     ENA               ; 36                          ;
+; boundary_port         ; 44                          ;
+; cycloneiii_ff         ; 144                         ;
+;     ENA               ; 58                          ;
 ;     ENA SCLR          ; 10                          ;
-;     SCLR              ; 10                          ;
-;     plain             ; 26                          ;
-; cycloneiii_lcell_comb ; 125                         ;
-;     arith             ; 49                          ;
-;         2 data inputs ; 49                          ;
-;     normal            ; 76                          ;
-;         1 data inputs ; 3                           ;
+;     SCLR              ; 42                          ;
+;     plain             ; 34                          ;
+; cycloneiii_lcell_comb ; 197                         ;
+;     arith             ; 80                          ;
+;         2 data inputs ; 80                          ;
+;     normal            ; 117                         ;
+;         1 data inputs ; 4                           ;
 ;         2 data inputs ; 34                          ;
-;         3 data inputs ; 8                           ;
-;         4 data inputs ; 31                          ;
+;         3 data inputs ; 16                          ;
+;         4 data inputs ; 63                          ;
 ; cycloneiii_pll        ; 1                           ;
-; cycloneiii_ram_block  ; 8                           ;
+; cycloneiii_ram_block  ; 15                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 5.10                        ;
-; Average LUT depth     ; 3.34                        ;
+; Average LUT depth     ; 2.91                        ;
 +-----------------------+-----------------------------+
 
 
@@ -561,7 +627,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -571,19 +637,19 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Thu Oct 04 19:07:54 2018
+    Info: Processing started: Fri Oct 05 17:51:00 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off vga -c vga
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12248): Elaborating Platform Designer system entity "PLL.qsys"
-Info (12250): 2018.10.04.19:08:31 Progress: Loading Lab3/PLL.qsys
-Info (12250): 2018.10.04.19:08:32 Progress: Reading input file
-Info (12250): 2018.10.04.19:08:33 Progress: Adding altpll_0 [altpll 17.1]
-Info (12250): 2018.10.04.19:08:35 Progress: Parameterizing module altpll_0
-Info (12250): 2018.10.04.19:08:35 Progress: Building connections
-Info (12250): 2018.10.04.19:08:35 Progress: Parameterizing connections
-Info (12250): 2018.10.04.19:08:35 Progress: Validating
-Info (12250): 2018.10.04.19:08:36 Progress: Done reading input file
+Info (12250): 2018.10.05.17:51:31 Progress: Loading Lab3/PLL.qsys
+Info (12250): 2018.10.05.17:51:32 Progress: Reading input file
+Info (12250): 2018.10.05.17:51:33 Progress: Adding altpll_0 [altpll 17.1]
+Info (12250): 2018.10.05.17:51:35 Progress: Parameterizing module altpll_0
+Info (12250): 2018.10.05.17:51:35 Progress: Building connections
+Info (12250): 2018.10.05.17:51:35 Progress: Parameterizing connections
+Info (12250): 2018.10.05.17:51:35 Progress: Validating
+Info (12250): 2018.10.05.17:51:35 Progress: Done reading input file
 Warning (12251): PLL.altpll_0: altpll_0.pll_slave must be connected to an Avalon-MM master
 Info (12250): PLL: Generating PLL "PLL" for QUARTUS_SYNTH
 Info (12250): Altpll_0: "PLL" instantiated altpll "altpll_0"
@@ -591,62 +657,59 @@ Info (12250): PLL: Done "PLL" with 2 modules, 2 files
 Info (12249): Finished elaborating Platform Designer system entity "PLL.qsys"
 Warning (12019): Can't analyze file -- file keyboard_reader.vhd is missing
 Info (12021): Found 2 design units, including 1 entities, in source file vgatext_top.vhd
-    Info (12022): Found design unit 1: vgaText_top-Behavioral File: C:/Users/WILL/Desktop/Lab3_Computer_Structure/Lab3/vgaText_top.vhd Line: 53
-    Info (12023): Found entity 1: vgaText_top File: C:/Users/WILL/Desktop/Lab3_Computer_Structure/Lab3/vgaText_top.vhd Line: 39
+    Info (12022): Found design unit 1: vgaText_top-Behavioral File: C:/Users/laboratorio/Desktop/Lab3_Computer_Structure/Lab3/vgaText_top.vhd Line: 53
+    Info (12023): Found entity 1: vgaText_top File: C:/Users/laboratorio/Desktop/Lab3_Computer_Structure/Lab3/vgaText_top.vhd Line: 39
 Info (12021): Found 2 design units, including 1 entities, in source file text_line.vhd
-    Info (12022): Found design unit 1: text_line-Behavioral File: C:/Users/WILL/Desktop/Lab3_Computer_Structure/Lab3/text_line.vhd Line: 62
-    Info (12023): Found entity 1: text_line File: C:/Users/WILL/Desktop/Lab3_Computer_Structure/Lab3/text_line.vhd Line: 38
+    Info (12022): Found design unit 1: text_line-Behavioral File: C:/Users/laboratorio/Desktop/Lab3_Computer_Structure/Lab3/text_line.vhd Line: 62
+    Info (12023): Found entity 1: text_line File: C:/Users/laboratorio/Desktop/Lab3_Computer_Structure/Lab3/text_line.vhd Line: 38
 Info (12021): Found 2 design units, including 1 entities, in source file tb_vgatext3.vhd
-    Info (12022): Found design unit 1: tb_vgaText3-behavior File: C:/Users/WILL/Desktop/Lab3_Computer_Structure/Lab3/tb_vgaText3.vhd Line: 42
-    Info (12023): Found entity 1: tb_vgaText3 File: C:/Users/WILL/Desktop/Lab3_Computer_Structure/Lab3/tb_vgaText3.vhd Line: 39
+    Info (12022): Found design unit 1: tb_vgaText3-behavior File: C:/Users/laboratorio/Desktop/Lab3_Computer_Structure/Lab3/tb_vgaText3.vhd Line: 42
+    Info (12023): Found entity 1: tb_vgaText3 File: C:/Users/laboratorio/Desktop/Lab3_Computer_Structure/Lab3/tb_vgaText3.vhd Line: 39
 Info (12021): Found 2 design units, including 1 entities, in source file tb_vgatext2.vhd
-    Info (12022): Found design unit 1: tb_vgaText2-behavior File: C:/Users/WILL/Desktop/Lab3_Computer_Structure/Lab3/tb_vgaText2.vhd Line: 38
-    Info (12023): Found entity 1: tb_vgaText2 File: C:/Users/WILL/Desktop/Lab3_Computer_Structure/Lab3/tb_vgaText2.vhd Line: 35
+    Info (12022): Found design unit 1: tb_vgaText2-behavior File: C:/Users/laboratorio/Desktop/Lab3_Computer_Structure/Lab3/tb_vgaText2.vhd Line: 38
+    Info (12023): Found entity 1: tb_vgaText2 File: C:/Users/laboratorio/Desktop/Lab3_Computer_Structure/Lab3/tb_vgaText2.vhd Line: 35
 Info (12021): Found 2 design units, including 1 entities, in source file tb_vgatext1.vhd
-    Info (12022): Found design unit 1: tb_vgaText1-behavior File: C:/Users/WILL/Desktop/Lab3_Computer_Structure/Lab3/tb_vgaText1.vhd Line: 39
-    Info (12023): Found entity 1: tb_vgaText1 File: C:/Users/WILL/Desktop/Lab3_Computer_Structure/Lab3/tb_vgaText1.vhd Line: 36
+    Info (12022): Found design unit 1: tb_vgaText1-behavior File: C:/Users/laboratorio/Desktop/Lab3_Computer_Structure/Lab3/tb_vgaText1.vhd Line: 39
+    Info (12023): Found entity 1: tb_vgaText1 File: C:/Users/laboratorio/Desktop/Lab3_Computer_Structure/Lab3/tb_vgaText1.vhd Line: 36
 Info (12021): Found 2 design units, including 1 entities, in source file blockramarbiter.vhd
-    Info (12022): Found design unit 1: blockRamArbiter-Behavioral File: C:/Users/WILL/Desktop/Lab3_Computer_Structure/Lab3/BlockRamArbiter.vhd Line: 50
-    Info (12023): Found entity 1: blockRamArbiter File: C:/Users/WILL/Desktop/Lab3_Computer_Structure/Lab3/BlockRamArbiter.vhd Line: 38
+    Info (12022): Found design unit 1: blockRamArbiter-Behavioral File: C:/Users/laboratorio/Desktop/Lab3_Computer_Structure/Lab3/BlockRamArbiter.vhd Line: 50
+    Info (12023): Found entity 1: blockRamArbiter File: C:/Users/laboratorio/Desktop/Lab3_Computer_Structure/Lab3/BlockRamArbiter.vhd Line: 38
 Info (12021): Found 2 design units, including 1 entities, in source file basicblockram.vhd
-    Info (12022): Found design unit 1: basicBlockRAM-Behavioral File: C:/Users/WILL/Desktop/Lab3_Computer_Structure/Lab3/basicBlockRAM.vhd Line: 52
-    Info (12023): Found entity 1: basicBlockRAM File: C:/Users/WILL/Desktop/Lab3_Computer_Structure/Lab3/basicBlockRAM.vhd Line: 38
+    Info (12022): Found design unit 1: basicBlockRAM-Behavioral File: C:/Users/laboratorio/Desktop/Lab3_Computer_Structure/Lab3/basicBlockRAM.vhd Line: 52
+    Info (12023): Found entity 1: basicBlockRAM File: C:/Users/laboratorio/Desktop/Lab3_Computer_Structure/Lab3/basicBlockRAM.vhd Line: 38
 Info (12021): Found 2 design units, including 1 entities, in source file vga.vhd
-    Info (12022): Found design unit 1: VGA-MAIN File: C:/Users/WILL/Desktop/Lab3_Computer_Structure/Lab3/VGA.vhd Line: 17
-    Info (12023): Found entity 1: VGA File: C:/Users/WILL/Desktop/Lab3_Computer_Structure/Lab3/VGA.vhd Line: 5
+    Info (12022): Found design unit 1: VGA-MAIN File: C:/Users/laboratorio/Desktop/Lab3_Computer_Structure/Lab3/VGA.vhd Line: 20
+    Info (12023): Found entity 1: VGA File: C:/Users/laboratorio/Desktop/Lab3_Computer_Structure/Lab3/VGA.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file fontrom.vhd
-    Info (12022): Found design unit 1: fontROM-Behavioral File: C:/Users/WILL/Desktop/Lab3_Computer_Structure/Lab3/fontROM.vhd Line: 48
-    Info (12023): Found entity 1: fontROM File: C:/Users/WILL/Desktop/Lab3_Computer_Structure/Lab3/fontROM.vhd Line: 34
+    Info (12022): Found design unit 1: fontROM-Behavioral File: C:/Users/laboratorio/Desktop/Lab3_Computer_Structure/Lab3/fontROM.vhd Line: 48
+    Info (12023): Found entity 1: fontROM File: C:/Users/laboratorio/Desktop/Lab3_Computer_Structure/Lab3/fontROM.vhd Line: 34
 Info (12021): Found 2 design units, including 0 entities, in source file commonpak.vhd
-    Info (12022): Found design unit 1: commonPak File: C:/Users/WILL/Desktop/Lab3_Computer_Structure/Lab3/commonPak.vhd Line: 15
-    Info (12022): Found design unit 2: commonPak-body File: C:/Users/WILL/Desktop/Lab3_Computer_Structure/Lab3/commonPak.vhd Line: 79
+    Info (12022): Found design unit 1: commonPak File: C:/Users/laboratorio/Desktop/Lab3_Computer_Structure/Lab3/commonPak.vhd Line: 15
+    Info (12022): Found design unit 2: commonPak-body File: C:/Users/laboratorio/Desktop/Lab3_Computer_Structure/Lab3/commonPak.vhd Line: 79
 Info (12021): Found 2 design units, including 1 entities, in source file sync.vhd
-    Info (12022): Found design unit 1: SYNC-MAIN File: C:/Users/WILL/Desktop/Lab3_Computer_Structure/Lab3/SYNC.vhd Line: 16
-    Info (12023): Found entity 1: SYNC File: C:/Users/WILL/Desktop/Lab3_Computer_Structure/Lab3/SYNC.vhd Line: 7
+    Info (12022): Found design unit 1: SYNC-MAIN File: C:/Users/laboratorio/Desktop/Lab3_Computer_Structure/Lab3/SYNC.vhd Line: 16
+    Info (12023): Found entity 1: SYNC File: C:/Users/laboratorio/Desktop/Lab3_Computer_Structure/Lab3/SYNC.vhd Line: 7
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/pll/pll.v
-    Info (12023): Found entity 1: PLL File: C:/Users/WILL/Desktop/Lab3_Computer_Structure/Lab3/db/ip/pll/pll.v Line: 6
+    Info (12023): Found entity 1: PLL File: C:/Users/laboratorio/Desktop/Lab3_Computer_Structure/Lab3/db/ip/pll/pll.v Line: 6
 Info (12021): Found 4 design units, including 4 entities, in source file db/ip/pll/submodules/pll_altpll_0.v
-    Info (12023): Found entity 1: PLL_altpll_0_dffpipe_l2c File: C:/Users/WILL/Desktop/Lab3_Computer_Structure/Lab3/db/ip/pll/submodules/pll_altpll_0.v Line: 37
-    Info (12023): Found entity 2: PLL_altpll_0_stdsync_sv6 File: C:/Users/WILL/Desktop/Lab3_Computer_Structure/Lab3/db/ip/pll/submodules/pll_altpll_0.v Line: 98
-    Info (12023): Found entity 3: PLL_altpll_0_altpll_tc42 File: C:/Users/WILL/Desktop/Lab3_Computer_Structure/Lab3/db/ip/pll/submodules/pll_altpll_0.v Line: 130
-    Info (12023): Found entity 4: PLL_altpll_0 File: C:/Users/WILL/Desktop/Lab3_Computer_Structure/Lab3/db/ip/pll/submodules/pll_altpll_0.v Line: 213
+    Info (12023): Found entity 1: PLL_altpll_0_dffpipe_l2c File: C:/Users/laboratorio/Desktop/Lab3_Computer_Structure/Lab3/db/ip/pll/submodules/pll_altpll_0.v Line: 37
+    Info (12023): Found entity 2: PLL_altpll_0_stdsync_sv6 File: C:/Users/laboratorio/Desktop/Lab3_Computer_Structure/Lab3/db/ip/pll/submodules/pll_altpll_0.v Line: 98
+    Info (12023): Found entity 3: PLL_altpll_0_altpll_tc42 File: C:/Users/laboratorio/Desktop/Lab3_Computer_Structure/Lab3/db/ip/pll/submodules/pll_altpll_0.v Line: 130
+    Info (12023): Found entity 4: PLL_altpll_0 File: C:/Users/laboratorio/Desktop/Lab3_Computer_Structure/Lab3/db/ip/pll/submodules/pll_altpll_0.v Line: 213
 Info (12127): Elaborating entity "vga" for the top level hierarchy
-Warning (10540): VHDL Signal Declaration warning at VGA.vhd(20): used explicit default value for signal "RESET" because signal was never assigned a value File: C:/Users/WILL/Desktop/Lab3_Computer_Structure/Lab3/VGA.vhd Line: 20
-Info (12128): Elaborating entity "SYNC" for hierarchy "SYNC:C1" File: C:/Users/WILL/Desktop/Lab3_Computer_Structure/Lab3/VGA.vhd Line: 51
-Info (12128): Elaborating entity "fontROM" for hierarchy "SYNC:C1|fontROM:C1" File: C:/Users/WILL/Desktop/Lab3_Computer_Structure/Lab3/SYNC.vhd Line: 41
-Info (12128): Elaborating entity "PLL" for hierarchy "PLL:C2" File: C:/Users/WILL/Desktop/Lab3_Computer_Structure/Lab3/VGA.vhd Line: 52
-Info (12128): Elaborating entity "PLL_altpll_0" for hierarchy "PLL:C2|PLL_altpll_0:altpll_0" File: C:/Users/WILL/Desktop/Lab3_Computer_Structure/Lab3/db/ip/pll/pll.v Line: 33
-Info (12128): Elaborating entity "PLL_altpll_0_stdsync_sv6" for hierarchy "PLL:C2|PLL_altpll_0:altpll_0|PLL_altpll_0_stdsync_sv6:stdsync2" File: C:/Users/WILL/Desktop/Lab3_Computer_Structure/Lab3/db/ip/pll/submodules/pll_altpll_0.v Line: 276
-Info (12128): Elaborating entity "PLL_altpll_0_dffpipe_l2c" for hierarchy "PLL:C2|PLL_altpll_0:altpll_0|PLL_altpll_0_stdsync_sv6:stdsync2|PLL_altpll_0_dffpipe_l2c:dffpipe3" File: C:/Users/WILL/Desktop/Lab3_Computer_Structure/Lab3/db/ip/pll/submodules/pll_altpll_0.v Line: 116
-Info (12128): Elaborating entity "PLL_altpll_0_altpll_tc42" for hierarchy "PLL:C2|PLL_altpll_0:altpll_0|PLL_altpll_0_altpll_tc42:sd1" File: C:/Users/WILL/Desktop/Lab3_Computer_Structure/Lab3/db/ip/pll/submodules/pll_altpll_0.v Line: 282
+Warning (10540): VHDL Signal Declaration warning at VGA.vhd(23): used explicit default value for signal "RESET" because signal was never assigned a value File: C:/Users/laboratorio/Desktop/Lab3_Computer_Structure/Lab3/VGA.vhd Line: 23
+Info (12128): Elaborating entity "SYNC" for hierarchy "SYNC:C1" File: C:/Users/laboratorio/Desktop/Lab3_Computer_Structure/Lab3/VGA.vhd Line: 62
+Info (12128): Elaborating entity "fontROM" for hierarchy "SYNC:C1|fontROM:C1" File: C:/Users/laboratorio/Desktop/Lab3_Computer_Structure/Lab3/SYNC.vhd Line: 43
+Info (12128): Elaborating entity "PLL" for hierarchy "PLL:C2" File: C:/Users/laboratorio/Desktop/Lab3_Computer_Structure/Lab3/VGA.vhd Line: 63
+Info (12128): Elaborating entity "PLL_altpll_0" for hierarchy "PLL:C2|PLL_altpll_0:altpll_0" File: C:/Users/laboratorio/Desktop/Lab3_Computer_Structure/Lab3/db/ip/pll/pll.v Line: 33
+Info (12128): Elaborating entity "PLL_altpll_0_stdsync_sv6" for hierarchy "PLL:C2|PLL_altpll_0:altpll_0|PLL_altpll_0_stdsync_sv6:stdsync2" File: C:/Users/laboratorio/Desktop/Lab3_Computer_Structure/Lab3/db/ip/pll/submodules/pll_altpll_0.v Line: 276
+Info (12128): Elaborating entity "PLL_altpll_0_dffpipe_l2c" for hierarchy "PLL:C2|PLL_altpll_0:altpll_0|PLL_altpll_0_stdsync_sv6:stdsync2|PLL_altpll_0_dffpipe_l2c:dffpipe3" File: C:/Users/laboratorio/Desktop/Lab3_Computer_Structure/Lab3/db/ip/pll/submodules/pll_altpll_0.v Line: 116
+Info (12128): Elaborating entity "PLL_altpll_0_altpll_tc42" for hierarchy "PLL:C2|PLL_altpll_0:altpll_0|PLL_altpll_0_altpll_tc42:sd1" File: C:/Users/laboratorio/Desktop/Lab3_Computer_Structure/Lab3/db/ip/pll/submodules/pll_altpll_0.v Line: 282
 Warning (12125): Using design file keyboard.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: keyboard-FSM File: C:/Users/WILL/Desktop/Lab3_Computer_Structure/Lab3/keyboard.vhd Line: 17
-    Info (12023): Found entity 1: keyboard File: C:/Users/WILL/Desktop/Lab3_Computer_Structure/Lab3/keyboard.vhd Line: 5
-Info (12128): Elaborating entity "keyboard" for hierarchy "keyboard:C3" File: C:/Users/WILL/Desktop/Lab3_Computer_Structure/Lab3/VGA.vhd Line: 53
-Warning (10492): VHDL Process Statement warning at keyboard.vhd(33): signal "counter" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/WILL/Desktop/Lab3_Computer_Structure/Lab3/keyboard.vhd Line: 33
-Warning (10492): VHDL Process Statement warning at keyboard.vhd(37): signal "counter" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/WILL/Desktop/Lab3_Computer_Structure/Lab3/keyboard.vhd Line: 37
-Warning (10492): VHDL Process Statement warning at keyboard.vhd(37): signal "data_vector" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/WILL/Desktop/Lab3_Computer_Structure/Lab3/keyboard.vhd Line: 37
-Info (19000): Inferred 1 megafunctions from design logic
+    Info (12022): Found design unit 1: keyboard-FSM File: C:/Users/laboratorio/Desktop/Lab3_Computer_Structure/Lab3/keyboard.vhd Line: 18
+    Info (12023): Found entity 1: keyboard File: C:/Users/laboratorio/Desktop/Lab3_Computer_Structure/Lab3/keyboard.vhd Line: 5
+Info (12128): Elaborating entity "keyboard" for hierarchy "keyboard:C3" File: C:/Users/laboratorio/Desktop/Lab3_Computer_Structure/Lab3/VGA.vhd Line: 64
+Info (19000): Inferred 2 megafunctions from design logic
     Info (276029): Inferred altsyncram megafunction from the following design logic: "SYNC:C1|fontROM:C1|ROM_rtl_0" 
         Info (286033): Parameter OPERATION_MODE set to ROM
         Info (286033): Parameter WIDTH_A set to 8
@@ -658,6 +721,14 @@ Info (19000): Inferred 1 megafunctions from design logic
         Info (286033): Parameter INDATA_ACLR_A set to NONE
         Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
         Info (286033): Parameter INIT_FILE set to db/vga.ram0_fontROM_16852496.hdl.mif
+    Info (276031): Inferred altsyncram megafunction from the following design logic: "keyboard:C3|Mux20_rtl_0"
+        Info (286033): Parameter OPERATION_MODE set to ROM
+        Info (286033): Parameter WIDTH_A set to 7
+        Info (286033): Parameter WIDTHAD_A set to 8
+        Info (286033): Parameter NUMWORDS_A set to 256
+        Info (286033): Parameter OUTDATA_REG_A set to UNREGISTERED
+        Info (286033): Parameter RAM_BLOCK_TYPE set to AUTO
+        Info (286033): Parameter INIT_FILE set to vga.VGA0.rtl.mif
 Info (12130): Elaborated megafunction instantiation "SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0"
 Info (12133): Instantiated megafunction "SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0" with the following parameter:
     Info (12134): Parameter "OPERATION_MODE" = "ROM"
@@ -671,25 +742,31 @@ Info (12133): Instantiated megafunction "SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0
     Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
     Info (12134): Parameter "INIT_FILE" = "db/vga.ram0_fontROM_16852496.hdl.mif"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_dg61.tdf
-    Info (12023): Found entity 1: altsyncram_dg61 File: C:/Users/WILL/Desktop/Lab3_Computer_Structure/Lab3/db/altsyncram_dg61.tdf Line: 27
-Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+    Info (12023): Found entity 1: altsyncram_dg61 File: C:/Users/laboratorio/Desktop/Lab3_Computer_Structure/Lab3/db/altsyncram_dg61.tdf Line: 27
+Info (12130): Elaborated megafunction instantiation "keyboard:C3|altsyncram:Mux20_rtl_0"
+Info (12133): Instantiated megafunction "keyboard:C3|altsyncram:Mux20_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "ROM"
+    Info (12134): Parameter "WIDTH_A" = "7"
+    Info (12134): Parameter "WIDTHAD_A" = "8"
+    Info (12134): Parameter "NUMWORDS_A" = "256"
+    Info (12134): Parameter "OUTDATA_REG_A" = "UNREGISTERED"
+    Info (12134): Parameter "RAM_BLOCK_TYPE" = "AUTO"
+    Info (12134): Parameter "INIT_FILE" = "vga.VGA0.rtl.mif"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_iou.tdf
+    Info (12023): Found entity 1: altsyncram_iou File: C:/Users/laboratorio/Desktop/Lab3_Computer_Structure/Lab3/db/altsyncram_iou.tdf Line: 27
 Info (286030): Timing-Driven Synthesis is running
-Info (17036): Removed 7 MSB VCC or GND address nodes from RAM block "SYNC:C1|fontROM:C1|altsyncram:ROM_rtl_0|altsyncram_dg61:auto_generated|ALTSYNCRAM" File: C:/Users/WILL/Desktop/Lab3_Computer_Structure/Lab3/db/altsyncram_dg61.tdf Line: 76
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 2 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "PS2_CLK" File: C:/Users/WILL/Desktop/Lab3_Computer_Structure/Lab3/VGA.vhd Line: 12
-    Warning (15610): No output dependent on input pin "PS2_DATA" File: C:/Users/WILL/Desktop/Lab3_Computer_Structure/Lab3/VGA.vhd Line: 13
-Info (21057): Implemented 188 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 289 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
-    Info (21059): Implemented 27 output pins
-    Info (21061): Implemented 149 logic cells
-    Info (21064): Implemented 8 RAM segments
+    Info (21059): Implemented 41 output pins
+    Info (21061): Implemented 229 logic cells
+    Info (21064): Implemented 15 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 12 warnings
-    Info: Peak virtual memory: 4836 megabytes
-    Info: Processing ended: Thu Oct 04 19:08:48 2018
-    Info: Elapsed time: 00:00:54
-    Info: Total CPU time (on all processors): 00:01:30
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4842 megabytes
+    Info: Processing ended: Fri Oct 05 17:51:45 2018
+    Info: Elapsed time: 00:00:45
+    Info: Total CPU time (on all processors): 00:01:33
 
 

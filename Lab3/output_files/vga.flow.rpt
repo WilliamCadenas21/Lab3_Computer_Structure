@@ -1,5 +1,5 @@
 Flow report for vga
-Thu Oct 04 19:09:49 2018
+Fri Oct 05 17:52:23 2018
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -40,20 +40,20 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Thu Oct 04 19:09:39 2018       ;
+; Flow Status                        ; Successful - Fri Oct 05 17:52:17 2018       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; vga                                         ;
 ; Top-level Entity Name              ; VGA                                         ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 149 / 114,480 ( < 1 % )                     ;
-;     Total combinational functions  ; 125 / 114,480 ( < 1 % )                     ;
-;     Dedicated logic registers      ; 82 / 114,480 ( < 1 % )                      ;
-; Total registers                    ; 82                                          ;
-; Total pins                         ; 30 / 529 ( 6 % )                            ;
+; Total logic elements               ; 229 / 114,480 ( < 1 % )                     ;
+;     Total combinational functions  ; 197 / 114,480 ( < 1 % )                     ;
+;     Dedicated logic registers      ; 144 / 114,480 ( < 1 % )                     ;
+; Total registers                    ; 144                                         ;
+; Total pins                         ; 44 / 529 ( 8 % )                            ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 128 / 3,981,312 ( < 1 % )                   ;
+; Total memory bits                  ; 18,176 / 3,981,312 ( < 1 % )                ;
 ; Embedded Multiplier 9-bit elements ; 0 / 532 ( 0 % )                             ;
 ; Total PLLs                         ; 1 / 4 ( 25 % )                              ;
 +------------------------------------+---------------------------------------------+
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/04/2018 19:07:55 ;
+; Start date & time ; 10/05/2018 17:51:01 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; vga                 ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 40368348300088.153869807509604         ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 90274944163536.153877986108424         ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                                   ; --            ; --          ; --         ;
@@ -93,11 +93,11 @@ refer to the applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:52     ; 1.0                     ; 4836 MB             ; 00:01:30                           ;
-; Fitter                    ; 00:00:32     ; 1.0                     ; 5471 MB             ; 00:00:26                           ;
-; Assembler                 ; 00:00:08     ; 1.0                     ; 4700 MB             ; 00:00:07                           ;
-; TimeQuest Timing Analyzer ; 00:00:07     ; 1.0                     ; 4839 MB             ; 00:00:03                           ;
-; Total                     ; 00:01:39     ; --                      ; --                  ; 00:02:06                           ;
+; Analysis & Synthesis      ; 00:00:44     ; 1.0                     ; 4842 MB             ; 00:01:33                           ;
+; Fitter                    ; 00:00:24     ; 1.0                     ; 5480 MB             ; 00:00:32                           ;
+; Assembler                 ; 00:00:05     ; 1.0                     ; 4700 MB             ; 00:00:05                           ;
+; TimeQuest Timing Analyzer ; 00:00:05     ; 1.1                     ; 4842 MB             ; 00:00:04                           ;
+; Total                     ; 00:01:18     ; --                      ; --                  ; 00:02:14                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -106,10 +106,10 @@ refer to the applicable agreement for further details.
 +---------------------------+------------------+------------+------------+----------------+
 ; Module Name               ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +---------------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis      ; WillamCadenas    ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter                    ; WillamCadenas    ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler                 ; WillamCadenas    ; Windows 10 ; 10.0       ; x86_64         ;
-; TimeQuest Timing Analyzer ; WillamCadenas    ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis      ; DESKTOP-KQ8LQKA  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter                    ; DESKTOP-KQ8LQKA  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler                 ; DESKTOP-KQ8LQKA  ; Windows 10 ; 10.0       ; x86_64         ;
+; TimeQuest Timing Analyzer ; DESKTOP-KQ8LQKA  ; Windows 10 ; 10.0       ; x86_64         ;
 +---------------------------+------------------+------------+------------+----------------+
 
 
