@@ -53,11 +53,9 @@ begin
 		if(clk_keyboard'event and clk_keyboard = '1') then --cambiar el clock a 1
 			
 			data_vector(counter) <= data;
-			if(counter <10)then
+			if(counter <=10)then
 				counter <= counter + 1;
-			end if;	
-				
-			if(counter >=10)then
+			else
 				--mostrar hexadecimal
 				if(data_vector(8 downto 1) = "11110000")then
 					info <=data_vector(8 downto 1);
@@ -65,8 +63,7 @@ begin
 					display_left <= show(data_vector(4 downto 1));
 				end if;
 				counter <= 0;
-			end if;
-		end if;	
+			end if;	
 
 	end process;
 	
