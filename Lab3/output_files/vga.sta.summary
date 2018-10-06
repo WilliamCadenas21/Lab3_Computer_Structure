@@ -2,16 +2,16 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1200mV 85C Model Setup 'C2|altpll_0|sd1|pll7|clk[0]'
-Slack : -3.857
-TNS   : -3.857
-
 Type  : Slow 1200mV 85C Model Setup 'PS2_CLK'
-Slack : -2.910
-TNS   : -161.397
+Slack : -138.510
+TNS   : -4634.857
+
+Type  : Slow 1200mV 85C Model Setup 'C2|altpll_0|sd1|pll7|clk[0]'
+Slack : -4.708
+TNS   : -4.708
 
 Type  : Slow 1200mV 85C Model Hold 'C2|altpll_0|sd1|pll7|clk[0]'
-Slack : 0.362
+Slack : 0.403
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'PS2_CLK'
@@ -27,19 +27,19 @@ Slack : 9.891
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'C2|altpll_0|sd1|pll7|clk[0]'
-Slack : 19.574
+Slack : 19.573
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Setup 'C2|altpll_0|sd1|pll7|clk[0]'
-Slack : -3.501
-TNS   : -3.501
-
 Type  : Slow 1200mV 0C Model Setup 'PS2_CLK'
-Slack : -2.618
-TNS   : -144.005
+Slack : -125.105
+TNS   : -4188.072
+
+Type  : Slow 1200mV 0C Model Setup 'C2|altpll_0|sd1|pll7|clk[0]'
+Slack : -4.300
+TNS   : -4.300
 
 Type  : Slow 1200mV 0C Model Hold 'C2|altpll_0|sd1|pll7|clk[0]'
-Slack : 0.355
+Slack : 0.354
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'PS2_CLK'
@@ -55,19 +55,19 @@ Slack : 9.887
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'C2|altpll_0|sd1|pll7|clk[0]'
-Slack : 19.575
+Slack : 19.574
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Setup 'C2|altpll_0|sd1|pll7|clk[0]'
-Slack : -1.982
-TNS   : -1.982
-
 Type  : Fast 1200mV 0C Model Setup 'PS2_CLK'
-Slack : -0.852
-TNS   : -44.388
+Slack : -68.603
+TNS   : -2281.447
+
+Type  : Fast 1200mV 0C Model Setup 'C2|altpll_0|sd1|pll7|clk[0]'
+Slack : -2.443
+TNS   : -2.443
 
 Type  : Fast 1200mV 0C Model Hold 'C2|altpll_0|sd1|pll7|clk[0]'
-Slack : 0.147
+Slack : 0.182
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'PS2_CLK'
@@ -76,7 +76,7 @@ TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'PS2_CLK'
 Slack : -3.000
-TNS   : -74.553
+TNS   : -87.050
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
 Slack : 9.574

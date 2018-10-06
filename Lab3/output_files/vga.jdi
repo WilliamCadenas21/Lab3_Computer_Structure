@@ -1,6 +1,6 @@
 <sld_project_info>
   <project>
-    <hash md5_digest_80b="01d56b975a450dbe79b8"/>
+    <hash md5_digest_80b="58dabeead51293b3fb6e"/>
   </project>
   <file_info>
     <file device="EP4CE115F29C7" path="vga.sof" usercode="0xFFFFFFFF"/>
@@ -8,7 +8,7 @@
   <sld_infos>
     <sld_info hpath="PLL:C2" name="C2">
       <assignment_values>
-        <assignment_value text="QSYS_NAME PLL HAS_SOPCINFO 1 GENERATION_ID 1538779896"/>
+        <assignment_value text="QSYS_NAME PLL HAS_SOPCINFO 1 GENERATION_ID 1538855156"/>
       </assignment_values>
       <parameters/>
     </sld_info>

@@ -17,7 +17,7 @@ end keyboard;
 
 architecture FSM of keyboard is
 	 signal counter: integer := 0;
-	 signal data_vector: std_logic_vector(10 DOWNTO 0); -- Is the data
+	 signal data_vector: std_logic_vector(7 DOWNTO 0); -- Is the data
 	 signal info: std_logic_vector(7 downto 0); -- keyboard code 
 	 signal clock: std_logic;
 	function show (vector : std_logic_vector(3 downto 0))
@@ -50,20 +50,22 @@ begin
 	-- read data
 	process(clk_keyboard)
 	begin
+	
 		if(clk_keyboard'event and clk_keyboard = '1') then --cambiar el clock a 1
 			
-			data_vector(counter) <= data;
-			if(counter <=10)then
-				counter <= counter + 1;
-			else
-				--mostrar hexadecimal
-				if(data_vector(8 downto 1) = "11110000")then
-					info <=data_vector(8 downto 1);
-					display_right <= show(data_vector(8 downto 5));
-					display_left <= show(data_vector(4 downto 1));
-				end if;
-				counter <= 0;
-			end if;	
+			if (counter >0 and Counter <9) then
+				data_vector(counter -1) <= data;
+			end if;
+			
+			if (counter =10 and data_vector /="11110000") then
+				info <=data_vector;
+				
+				display_right <= show(data_vector(7 downto 4));
+				display_left <= show(data_vector(3 downto 0));
+			end if;
+			
+			counter <= (counter+1) mod 11;
+		end if;	
 
 	end process;
 	
